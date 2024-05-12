@@ -8,9 +8,17 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'hero': "url('/src/public/assets/images/bg-hero.png')",
+      },
+      fontFamily: {
+        'reikna': ['Reikna'],
+        'manjari': ['Manjari'],
+        'libre-franklin': ['Libre Franklin'],
+      },
+      colors: {
+        'c-yellow': '#FAB874',
+        'c-green': '#629A9D',
+        'c-green-dark': '#113B3E',
       },
     },
   },

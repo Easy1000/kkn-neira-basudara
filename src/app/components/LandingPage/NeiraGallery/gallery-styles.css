@@ -1,0 +1,30 @@
+.slide{
+    perspective: 100px;
+    animation: scroll 80s infinite linear;
+}
+
+.slide-2{
+    perspective: 100px;
+    animation: scroll-2 160s infinite linear;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-1800px);
+    }
+}
+
+
+@keyframes scroll-2{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(3400px);
+    }
+}
+
+
