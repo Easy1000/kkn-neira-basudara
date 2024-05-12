@@ -8,7 +8,7 @@ export const NewsThumbnail = () => {
         <div className='flex lg:gap-8 lg:py-5'>
             
             <div className='w-60 h-40  hover:cursor-pointer'>
-                <Image src={PicThumbnail}/>
+                <Image src={PicThumbnail} alt='thumbnail news'/>
             </div>
             <div className='flex flex-col justify-evenly'>
                 <div className='flex justify-between items-center '>

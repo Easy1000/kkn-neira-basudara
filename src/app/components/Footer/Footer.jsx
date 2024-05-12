@@ -7,12 +7,12 @@ import Button from '../Button/Button'
 const Footer = () => {
   return (
     <div className='w-full h-auto '>
-        <Image src={TransisiFooter} className='w-full h-auto absolute  bg-[#0F1112] -z-10 lg:-translate-y-10' />
+        <Image src={TransisiFooter} alt='' className='w-full h-auto absolute  bg-[#0F1112] -z-10 lg:-translate-y-10' />
         <footer className='z-20 text-black bg-c-yellow lg:px-32 lg:py-20 lg:translate-y-[700px]'>
           <div className='flex w-full h-auto justify-around lg:gap-20'>
             <div className='w-1/3 flex flex-col'>
               <div className='flex items-center lg:gap-4'>
-                <Image src={Logo}/>
+                <Image src={Logo} alt='logo neira basudara'/>
                 <h2 className='font-reikna lg:text-7xl' style={{ lineHeight: '40px' }}>Neira <br/> Basudara</h2>
               </div>
               <div className='flex flex-col gap-2 lg:mt-4'>

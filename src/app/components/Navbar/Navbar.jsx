@@ -7,7 +7,7 @@ const Navbar = () => {
         <nav className="fixed top-0 z-[9999] lg:px-20 lg:py-1 w-[90%] lg:mx-20 rounded-full border-[1px] lg:backdrop-blur-2xl backdrop-blur-md lg:drop-shadow-md lg:mt-12 bg-white/10">
             <div className="flex flex-row w-full justify-between">
                 <a href="#" className="flex items-center lg:gap-4">
-                    <Image src={Logo} className="flex w-auto lg:h-12"/>
+                    <Image src={Logo} alt="logo neira basudara" className="flex w-auto lg:h-12"/>
                     <p className="flex font-reikna lg:text-4xl">Neira Basudara</p>
                 </a>
 

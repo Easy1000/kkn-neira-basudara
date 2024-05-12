@@ -30,7 +30,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 const KontenInteraktif = () => {
     return (
       <div className="overflow-x-clip relative lg:mt-72">
-        <Image src={GradientBackground} className="scale-[175%] absolute -z-20" quality={100}/>
+        <Image src={GradientBackground} alt='' className="scale-[175%] absolute -z-20" quality={100}/>
         
         <Swiper
         effect={'coverflow'}
@@ -56,25 +56,25 @@ const KontenInteraktif = () => {
       >
       
         <SwiperSlide>
-          <Image src={Carousel1} className="scale-[150%]" quality={100}/>
+          <Image src={Carousel1} alt='konten interaktif' className="scale-[150%]" quality={100}/>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={Carousel2} className="scale-[150%]" quality={100}/>
+          <Image src={Carousel2} alt='konten interaktif' className="scale-[150%]" quality={100}/>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={Carousel3} className="scale-[150%]" quality={100}/>
+          <Image src={Carousel3} alt='konten interaktif' className="scale-[150%]" quality={100}/>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={Carousel4} className="scale-[150%]" quality={100}/>
+          <Image src={Carousel4} alt='konten interaktif' className="scale-[150%]" quality={100}/>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={Carousel5} className="scale-[150%]" quality={100}/>
+          <Image src={Carousel5} alt='konten interaktif' className="scale-[150%]" quality={100}/>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={Carousel6} className="scale-[150%]" quality={100}/>
+          <Image src={Carousel6} alt='konten interaktif' className="scale-[150%]" quality={100}/>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={Carousel7} className="scale-[150%]" quality={100}/>
+          <Image src={Carousel7} alt='konten interaktif' className="scale-[150%]" quality={100}/>
         </SwiperSlide>
 
         

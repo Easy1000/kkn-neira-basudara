@@ -41,28 +41,28 @@ const NeiraGallery = () => {
             {/* slidetrack */}
             <div className='w-[3600px] flex flex-row lg:gap-6'>
             
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic1} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic2} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic3} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic1} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic2} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic3} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic1} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic2} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic1} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic2} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic3} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic1} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic2} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic3} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic1} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic2} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
                 
             </div>
 
             {/* slidetrack 2*/}
             <div className='w-[3460px] flex flex-row lg:gap-6 -translate-x-[50%]'>
             
-                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic4} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic5} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[707px] bg-slate-500 flex relative'><Image src={Pic6} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic4} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic5} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[707px] bg-slate-500 flex relative'><Image src={Pic6} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic4} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic5} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic4} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic5} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[707px] bg-slate-500 flex relative'><Image src={Pic6} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic4} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic5} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[707px] bg-slate-500 flex relative'><Image src={Pic6} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic4} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide-2 hover:scale-110 transform duration-300 h-full w-[341px] bg-slate-500 flex relative'><Image src={Pic5} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
                 
                 
                 
@@ -72,14 +72,14 @@ const NeiraGallery = () => {
             {/* slidetrack-3 */}
             <div className='w-[3600px] flex flex-row lg:gap-6'>
             
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic7} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic8} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic9} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic7} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic8} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic9} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic7} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
-                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic8} fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic7} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic8} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic9} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic7} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic8} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic9} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[376px] bg-slate-500 flex relative'><Image src={Pic7} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
+                <div className='slide hover:scale-110 transform duration-300 h-full w-[524px] bg-slate-500 flex relative'><Image src={Pic8} alt='galeri neira' fill={true}/><p className='absolute bottom-8 left-6'>Snorkeling Points</p></div>
                 
                 
             </div>
