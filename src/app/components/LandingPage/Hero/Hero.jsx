@@ -43,7 +43,7 @@ const Hero = () => {
   
         
         <div className="flex justify-center">
-          <p className="flex text-center lg:mx-96 lg:text-lg lg:mt-56 z-30 lg:max-w-7xl mt-48 mx-12 max-w-md">
+          <p className="flex text-center xl:mx-96 lg:mx-72 lg:text-lg lg:mt-56 xl:mt-72 z-30 lg:max-w-7xl mt-48 mx-12 max-w-md">
             Tim KKN-PPM UGM unit Banda melaksanakan audiensi dengan Bappeda dan Pemerintah Provinsi Maluku Tengah pada tanggal 3 dan 5 Februari 2024. Audiensi yang dilakukan membahas tentang hasil eksperimentasi penerapan action research model Living Lab dalam KKN-PPM dengan tema “Akselerasi pengembangan pariwisata kawasan Banda Neira”. Lorem ipsum dolor sit amet consectetur. Dictumst donec urna turpis adipiscing cum cursus tempus ultrices vitae. In maecenas magna egestas sed dolor faucibus sit eu habitant. Tellus tristique tellus vel et facilisis amet et id duis. Erat vitae nec libero. Lorem ipsum dolor sit amet consectetur. Dictumst donec urna turpis adipiscing cum cursus tempus ultrices vitae. In maecenas magna egestas sed dolor faucibus sit eu habitant. Tellus tristique tellus vel et facilisis amet et id duis. Erat vitae nec libero.
           </p>     
         </div>
