@@ -2,15 +2,15 @@ import React from 'react'
 import './gallery-styles.css';
 import Image from 'next/image';
 import Button from '/src/app/components/Button/Button';
-import Pic1 from '/src/public/assets/images/neira-gallery/c1.png'
-import Pic2 from '/src/public/assets/images/neira-gallery/c2.png'
-import Pic3 from '/src/public/assets/images/neira-gallery/c3.png'
-import Pic4 from '/src/public/assets/images/neira-gallery/c4.png'
-import Pic5 from '/src/public/assets/images/neira-gallery/c5.png'
-import Pic6 from '/src/public/assets/images/neira-gallery/c6.png'
-import Pic7 from '/src/public/assets/images/neira-gallery/c7.png'
-import Pic8 from '/src/public/assets/images/neira-gallery/c8.png'
-import Pic9 from '/src/public/assets/images/neira-gallery/c9.png'
+import Pic1 from '/public/images/landing-page/neira-gallery/c2.png'
+import Pic2 from '/public/images/landing-page/neira-gallery/c2.png'
+import Pic3 from '/public/images/landing-page/neira-gallery/c3.png'
+import Pic4 from '/public/images/landing-page/neira-gallery/c4.png'
+import Pic5 from '/public/images/landing-page/neira-gallery/c5.png'
+import Pic6 from '/public/images/landing-page/neira-gallery/c6.png'
+import Pic7 from '/public/images/landing-page/neira-gallery/c7.png'
+import Pic8 from '/public/images/landing-page/neira-gallery/c8.png'
+import Pic9 from '/public/images/landing-page/neira-gallery/c9.png'
 
 
 const NeiraGallery = () => {

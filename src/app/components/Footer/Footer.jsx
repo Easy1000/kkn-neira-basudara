@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import Logo from '/src/public/assets/images/LOGO.png'
-import TransisiFooter from '/src/public/assets/images/footer/TransisiFooter.png'
+import Logo from '/public/images/landing-page/LOGO.png'
+import TransisiFooter from '/public/images/landing-page/footer/TransisiFooter.png'
 import Button from '../Button/Button'
 
 const Footer = () => {
@@ -53,7 +53,7 @@ const Footer = () => {
                 </a>
                 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="47" fill="none" viewBox="0 0 50 47">
-                  <g clip-path="url(#a)">
+                  <g clipPath="url(#a)">
                     <path fill="#0F1112" d="M49.254 14.1s-.478-3.24-1.952-4.663c-1.867-1.873-3.953-1.882-4.91-1.992-6.854-.478-17.144-.478-17.144-.478h-.019s-10.29 0-17.143.478c-.957.11-3.043.119-4.91 1.992C1.702 10.86 1.233 14.1 1.233 14.1s-.498 3.81-.498 7.61v3.562c0 3.8.489 7.61.489 7.61s.478 3.24 1.943 4.663c1.866 1.872 4.316 1.808 5.408 2.01 3.924.358 16.664.468 16.664.468s10.3-.018 17.152-.486c.958-.11 3.044-.12 4.91-1.992 1.475-1.423 1.953-4.663 1.953-4.663s.489-3.8.489-7.61V21.71c0-3.8-.489-7.61-.489-7.61ZM20.176 29.595v-13.21l13.237 6.628-13.237 6.582Z"/>
                   </g>
                   <defs>

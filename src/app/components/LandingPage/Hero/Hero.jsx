@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import DesktopHero from "/src/public/assets/images/bg-hero-desktop.png";
-import Logo from "/src/public/assets/images/LOGO.png";
-import HeroOrnament1 from "/src/public/assets/images/ornament-hero-1.png";
-import HeroOrnament2 from "/src/public/assets/images/ornament-hero-2.png";
+import DesktopHero from "/public/images/landing-page/bg-hero-desktop.png";
+import Logo from "/public/images/landing-page/LOGO.png";
+import HeroOrnament1 from "/public/images/landing-page/ornament-hero-1.png";
+import HeroOrnament2 from "/public/images/landing-page/ornament-hero-2.png";
 
 const Hero = () => {
     return(

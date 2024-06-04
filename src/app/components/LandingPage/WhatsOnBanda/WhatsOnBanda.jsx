@@ -1,5 +1,5 @@
 import Card from "../../Card/Card";
-import FotoPodcast from "/src/public/assets/images/whats-on-banda/foto-podcast.png";
+import FotoPodcast from "/public/images/landing-page/whats-on-banda/foto-podcast.png";
 
 const WhatsOnBanda = () => {
     return (

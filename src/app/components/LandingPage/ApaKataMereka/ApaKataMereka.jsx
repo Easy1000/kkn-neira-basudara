@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import BgDesktopCrop from '/src/public/assets/images/apa-kata-mereka/bg-desktop-apa 2.png'
+import BgDesktopCrop from '/public/images/landing-page/apa-kata-mereka/bg-desktop-apa 2.png'
 import BgMobileCrop from '/public/images/landing-page/apa-kata-mereka/bg-mobile.png'
 import Button from '../../Button/Button'
-import CindyDesktop from '/src/public/assets/images/apa-kata-mereka/Cindy.png'
-import AkbarDesktop from '/src/public/assets/images/apa-kata-mereka/Akbar.png'
-import BuNiaDesktop from '/src/public/assets/images/apa-kata-mereka/Bu Nia.png'
-import ProfPurwoDesktop from '/src/public/assets/images/apa-kata-mereka/Prof Purwo.png'
+import CindyDesktop from '/public/images/landing-page/apa-kata-mereka/Cindy.png'
+import AkbarDesktop from '/public/images/landing-page/apa-kata-mereka/Akbar.png'
+import BuNiaDesktop from '/public/images/landing-page/apa-kata-mereka/Bu Nia.png'
+import ProfPurwoDesktop from '/public/images/landing-page/apa-kata-mereka/Prof Purwo.png'
 
 
 export const ApaKataMereka = () => {

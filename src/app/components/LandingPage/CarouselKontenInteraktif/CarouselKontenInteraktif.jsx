@@ -141,7 +141,7 @@
                         // spaceBetween: 30,
                         },
                     }}
-                    lazy={true}
+                    
                     coverflowEffect={{
                         rotate: 0,
                         stretch: 5,
@@ -166,7 +166,7 @@
                     muted={true}
                     loop
                     onClick={() => handleVideoClick(videodata.id, videodata.url)}
-                    loading="lazy"
+                    
                     >
                     <source src={videodata.path} type="video/mp4" />
                     </video>

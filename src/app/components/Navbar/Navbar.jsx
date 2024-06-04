@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Logo from "/src/public/assets/images/LOGO.png";
+import Logo from "/public/images/landing-page/LOGO.png";
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
