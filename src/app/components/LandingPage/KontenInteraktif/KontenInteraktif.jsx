@@ -40,27 +40,27 @@ const KontenInteraktif = () => {
             navigation={true}
           >
           <SwiperSlide>
-            <Image src={Carousel1} alt='konten interaktif'/>
+            <Image width={200} height={200} src={Carousel1} alt='konten interaktif'/>
           </SwiperSlide>
 
           <SwiperSlide>
-            <Image src={Carousel2} alt='konten interaktif'/>
+            <Image width={200} height={200} src={Carousel2} alt='konten interaktif'/>
           </SwiperSlide>
 
           <SwiperSlide>
-            <Image src={Carousel3} alt='konten interaktif'/>
+            <Image width={200} height={200} src={Carousel3} alt='konten interaktif'/>
           </SwiperSlide>
           
           <SwiperSlide>
-            <Image src={Carousel4} alt='konten interaktif'/>
+            <Image width={200} height={200} src={Carousel4} alt='konten interaktif'/>
           </SwiperSlide>
 
           <SwiperSlide>
-            <Image src={Carousel5} alt='konten interaktif'/>
+            <Image width={200} height={200} src={Carousel5} alt='konten interaktif'/>
           </SwiperSlide>
 
           <SwiperSlide>
-            <Image src={Carousel6} alt='konten interaktif'/>
+            <Image width={200} height={200} src={Carousel6} alt='konten interaktif'/>
           </SwiperSlide>
         
           </Swiper>
@@ -68,7 +68,7 @@ const KontenInteraktif = () => {
 
         {/* desktop */}
         {/* <div className="overflow-x-clip lg:mt-72 hidden lg:relative">
-          <Image src={GradientBackground} alt='' className="scale-[175%] absolute -z-20" quality={100}/>
+          <Image width={200} height={200} src={GradientBackground} alt='' className="scale-[175%] absolute -z-20" quality={100}/>
         
           <Swiper
           effect={'coverflow'}
@@ -94,25 +94,25 @@ const KontenInteraktif = () => {
           >
       
           <SwiperSlide>
-            <Image src={Carousel1} alt='konten interaktif' className="scale-[150%]" quality={100}/>
+            <Image width={200} height={200} src={Carousel1} alt='konten interaktif' className="scale-[150%]" quality={100}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={Carousel2} alt='konten interaktif' className="scale-[150%]" quality={100}/>
+            <Image width={200} height={200} src={Carousel2} alt='konten interaktif' className="scale-[150%]" quality={100}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={Carousel3} alt='konten interaktif' className="scale-[150%]" quality={100}/>
+            <Image width={200} height={200} src={Carousel3} alt='konten interaktif' className="scale-[150%]" quality={100}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={Carousel4} alt='konten interaktif' className="scale-[150%]" quality={100}/>
+            <Image width={200} height={200} src={Carousel4} alt='konten interaktif' className="scale-[150%]" quality={100}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={Carousel5} alt='konten interaktif' className="scale-[150%]" quality={100}/>
+            <Image width={200} height={200} src={Carousel5} alt='konten interaktif' className="scale-[150%]" quality={100}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={Carousel6} alt='konten interaktif' className="scale-[150%]" quality={100}/>
+            <Image width={200} height={200} src={Carousel6} alt='konten interaktif' className="scale-[150%]" quality={100}/>
           </SwiperSlide>
           <SwiperSlide>
-            <Image src={Carousel7} alt='konten interaktif' className="scale-[150%]" quality={100}/>
+            <Image width={200} height={200} src={Carousel7} alt='konten interaktif' className="scale-[150%]" quality={100}/>
           </SwiperSlide>
 
           

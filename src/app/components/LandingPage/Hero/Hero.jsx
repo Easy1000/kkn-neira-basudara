@@ -9,13 +9,13 @@ const Hero = () => {
       
       <div className="relative">
         <div className="w-full h-screen object-cover absolute -z-50 bg-slate-600">
-          <Image src={DesktopHero} className="w-full h-screen object-cover -z-50 absolute" />
+          <Image src={DesktopHero} className="w-full h-screen object-cover -z-50 absolute" alt='DesktopHero'/>
           <div className="w-full h-48 bg-gradient-to-b from-transparent to-black absolute bottom-0"></div>
         </div>
 
         <div className="lg:text-right flex flex-col lg:mx-32 pt-72 mx-12">
           <div className="flex flex-row justify-end ml-20 z-10">
-            <Image src={Logo} className="flex scale-75 lg:scale-100 translate-x-6 translate-y-4 lg:translate-x-0 lg:translate-y-0" />
+            <Image src={Logo} className="flex scale-75 lg:scale-100 translate-x-6 translate-y-4 lg:translate-x-0 lg:translate-y-0" alt='logo neira basudara' />
           </div>
   
           <div className="flex flex-col lg:-mt-6 z-10 items-end lg:gap-8 -mt-2">
@@ -50,13 +50,13 @@ const Hero = () => {
   
         <div className="absolute w-full h-full -z-20">
           <div className='absolute lg:-top-1/2 -top-[1000px]'>
-            <Image src={HeroOrnament2} className="h-auto lg:w-[500px] w-56" />
+            <Image src={HeroOrnament2} className="h-auto lg:w-[500px] w-56" alt='ornament2'/>
           </div>
   
         </div>
   
         <div className='absolute right-0 lg:-bottom-72 -z-20'>
-          <Image src={HeroOrnament1} className="h-auto lg:w-[330px] w-28" />
+          <Image src={HeroOrnament1} className="h-auto lg:w-[330px] w-28" alt='ornament1'/>
         </div>
   </div>
     );

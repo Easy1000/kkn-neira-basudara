@@ -68,7 +68,7 @@ const Footer = () => {
               <div className='flex font-manjari w-full justify-between'>
                 <div className='flex-col flex justify-around gap-8 lg:gap-8'>
                   <a href="">PODCAST</a>
-                  <a href="">NEWS</a>
+                  <a href="/news" onClick={() => router.push("/news")}>NEWS</a>
                   <a href="">TEAM</a>
                 </div>
                 <div className='flex-col flex lg:gap-8 gap-4'>

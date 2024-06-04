@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Logo from "/public/images/landing-page/LOGO.png";
+import Router from "next/navigation";
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -41,7 +42,7 @@ const Navbar = () => {
                 </a>
 
                 <div className="lg:flex lg:gap-10 xl:gap-32 items-center hidden">
-                    <a className='hover:underline' href="">NEWS</a>
+                    <a className='hover:underline' href="/news" onClick={() => router.push("/news")}>NEWS</a>
                     <a className='hover:underline' href="">PODCAST</a>
                     <a className='hover:underline' href="">TEAM</a>
                     <a className='hover:underline' href="">GALLERY</a>
@@ -63,7 +64,7 @@ const Navbar = () => {
                 {isDropdownOpen && (
                     <div className="w-200 h-auto fixed z-[9999] drop-shadow-md right-0 top-16 border-[1px] rounded-2xl py-4 px-8 font-manjari visible lg:hidden bg-white/10 backdrop-blur-md">
                         <div className="flex flex-col items-center gap-2 ">
-                            <a className='hover:underline' href="">NEWS</a>
+                            <a className='hover:underline' href="/news" onClick={() => router.push("/news")}>NEWS</a>
                             <a className='hover:underline' href="">PODCAST</a>
                             <a className='hover:underline' href="">TEAM</a>
                             <a className='hover:underline' href="">GALLERY</a>

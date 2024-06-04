@@ -1,6 +1,7 @@
     import React, { useRef, useState } from 'react';
     // Import Swiper React components
     import { Swiper, SwiperSlide } from 'swiper/react';
+    import Image from 'next/image';
 
     // Import Swiper styles
     import 'swiper/css';
@@ -99,18 +100,22 @@
 
     return (
         <div className='w-full relative'>
+            
             <div className='overflow-y-visible relative'>
+                
                 <div className='w-full h-screen  absolute'>
-                    <img src = '/images/landing-page/konten-interaktif/Group 132.png' className='absolute -z-50 w-full h-auto lg:hidden object-cover scale-[175%]'/>
+                    
+                    <Image alt='ornamen 1' width={700} height={700} src = '/images/landing-page/konten-interaktif/Group 132.png' className='absolute -z-50 w-full h-auto lg:hidden object-cover scale-[175%]'/>
                 </div>
                 <div className='w-full h-screen object-cover absolute '>
-                    <img src = '/images/landing-page/konten-interaktif/Group 130(1).png' className='absolute opacity-0 lg:opacity-100 -z-50 w-screen h-full  object-cover scale-150 2xl:scale-[220%] 2xl:-translate-y-12 -translate-y-72'/>
+                    <Image alt='ornamen 2' width={700} height={700} src = '/images/landing-page/konten-interaktif/Group 130(1).png' className='absolute opacity-0 lg:opacity-100 -z-50 w-screen h-full  object-cover scale-150 2xl:scale-[220%] 2xl:-translate-y-12 -translate-y-72'/>
                 </div>
                 
 
             </div>
+            
             <div className='my-64 md:my-96 lg:my-[450px]'>
-
+                
                 <Swiper
                     effect={'coverflow'}
                     grabCursor={true}
@@ -174,17 +179,16 @@
                 ))}
                 
                 </Swiper>
-                <div className='flex mt-10 lg:mt-20'>
-                    <Button 
-                        text='SEE MORE'
-                        isAction={true}
-                        isPrimary={false}
-                        className='mx-auto'
-                    />
-
-                </div>
+                
             </div>
+                <Button 
+                text='SEE MORE'
+                isAction={true}
+                isPrimary={false}
+                className='z-50 flex justify-center -translate-y-56 md:-translate-y-80 lg:-translate-y-96 ' 
+            />
             
+                    
         </div>
     );
     }

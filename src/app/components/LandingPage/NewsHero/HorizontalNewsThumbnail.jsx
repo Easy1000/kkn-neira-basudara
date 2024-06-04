@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import PicThumbnail from '/public/images/landing-page/news/news-thumbnail-2.png';
 export const HorizontalNewsThumbnail = ({category, date, title, subTitle, imgPath}) => {
   return (
     <div>
