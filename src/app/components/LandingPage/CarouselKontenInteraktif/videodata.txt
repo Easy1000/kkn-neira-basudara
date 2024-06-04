@@ -1,0 +1,27 @@
+const videodata = [
+    {
+        id: 1,
+        name: 'video1',
+        path: '/videos/interactive-carousel/video-1.mp4',
+    },
+    {
+        id: 2,
+        name: 'video2',
+        path: '/videos/interactive-carousel/video-2.mp4',
+    },
+    {
+        id: 3,
+        name: 'video3',
+        path: '/videos/interactive-carousel/video-3.mp4',
+    },
+    {
+        id: 4,
+        name: 'video6',
+        path: '/videos/interactive-carousel/video-6.mp4',
+    },
+    {
+        id: 5,
+        name: 'video4',
+        path: '/videos/interactive-carousel/video-4.mp4',
+    },
+]

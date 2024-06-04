@@ -8,3 +8,8 @@ html{
   color:white;
   font-family: libre-franklin;
 }
+
+body{
+  overflow-x: hidden;
+  
+}

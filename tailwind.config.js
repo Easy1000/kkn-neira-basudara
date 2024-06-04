@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero': "url('/src/public/assets/images/bg-hero.png')",
+        'konten-interaktif-mobile': "url(/public/images/landing-page/konten-interaktif/Group 132.png)"
       },
       fontFamily: {
         'reikna': ['Reikna'],
@@ -22,5 +23,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 };

@@ -1,17 +1,39 @@
 'use client'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Logo from "/src/public/assets/images/LOGO.png";
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY) {
+                // Scrolling down
+                setIsVisible(false);
+            } else {
+                // Scrolling up
+                setIsVisible(true);
+            }
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [lastScrollY]);
+
     return (
-        <nav className="fixed top-0 z-[9999] lg:px-20 lg:py-1 w-[90%] lg:mx-20 rounded-full border-[1px] lg:backdrop-blur-2xl backdrop-blur-md lg:drop-shadow-md lg:mt-12 bg-white/10 py-2 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 mt-9">
+        <nav className={`fixed top-0 z-[9999] lg:px-20 lg:py-1 w-[90%] lg:mx-20 rounded-full border-[1px] lg:backdrop-blur-2xl backdrop-blur-md lg:drop-shadow-md lg:mt-12 bg-white/10 py-2 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 mt-9 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-36'}`}>
             <div className="flex flex-row w-full justify-between">
                 <a href="#" className="flex items-center lg:gap-4">
                     <Image src={Logo} alt="logo neira basudara" className="flex lg:w-auto lg:h-12 w-10 ml-4"/>
