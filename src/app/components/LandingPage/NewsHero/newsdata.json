@@ -1,0 +1,28 @@
+
+[
+    {
+        "id": 1,
+        "title":"Benteng Belgica Lorem Ipsum Lorem Lorem Ditemukan",
+        "category":"NATURE",
+        "date":"17 Agustus 2023",
+        "subTitle":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        "imgPath":"/images/landing-page/news/news-thumbnail-1.png"
+    },
+    {
+        "id": 2,
+        "title":"Benteng Belgica Lorem Ipsum Lorem Lorem Ditemukan",
+        "category":"NATURE",
+        "date":"17 Agustus 2023",
+        "subTitle":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        "imgPath":"/images/landing-page/news/news-thumbnail-2.png"
+    },
+    {
+        "id": 3,
+        "title":"Benteng Belgica Lorem Ipsum Lorem Lorem Ditemukan",
+        "category":"NATURE",
+        "date":"17 Agustus 2023",
+        "subTitle":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        "imgPath":"/images/landing-page/news/news-thumbnail-3.png"
+    }
+      
+]

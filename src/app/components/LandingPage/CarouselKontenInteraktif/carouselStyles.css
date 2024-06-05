@@ -1,0 +1,19 @@
+/* .swiper-{
+    height: 500px;
+} */
+
+.swiper-slide{
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.swiper-button-prev {
+    color: white;
+    margin-left: 50px;
+}
+
+.swiper-button-next{
+    color: white;
+    margin-right: 50px;
+}

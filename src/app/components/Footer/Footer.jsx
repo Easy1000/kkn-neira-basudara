@@ -1,39 +1,45 @@
 import React from 'react'
 import Image from 'next/image'
-import Logo from '/src/public/assets/images/LOGO.png'
-import TransisiFooter from '/src/public/assets/images/footer/TransisiFooter.png'
+import Logo from '/public/images/landing-page/LOGO.png'
+import TransisiFooter from '/public/images/landing-page/footer/TransisiFooter.png'
 import Button from '../Button/Button'
 
 const Footer = () => {
   return (
-    <div className='w-full h-auto '>
-        <Image src={TransisiFooter} alt='' className='w-full h-auto absolute  bg-[#0F1112] -z-10 lg:-translate-y-10' />
-        <footer className='z-20 text-black bg-c-yellow lg:px-32 lg:py-20 lg:translate-y-[700px]'>
-          <div className='flex w-full h-auto justify-around lg:gap-20'>
-            <div className='w-1/3 flex flex-col'>
-              <div className='flex items-center lg:gap-4'>
-                <Image src={Logo} alt='logo neira basudara'/>
-                <h2 className='font-reikna lg:text-7xl' style={{ lineHeight: '40px' }}>Neira <br/> Basudara</h2>
+    <div className='w-full h-auto relative'>
+        <footer className='z-20 text-black bg-c-yellow lg:pb-20 pb-12'>
+          <Image src={TransisiFooter} alt='' className='w-full h-auto bg-[#0F1112] -z-30 object-cover ' />
+          
+          <div className='flex w-[60%] max-w-sm lg:max-w-full 2xl:max-w-[80%] mx-auto lg:px-12 lg:w-full h-auto justify-around lg:gap-32 lg:flex-row flex-col items-center gap-14 '>
+            <div className='lg:w-1/3 flex flex-col items-center gap-4'>
+              
+              <div className='flex items-center lg:gap-4 gap-4'>
+                <Image src={Logo} alt='logo neira basudara' className='w-28 xl:w-40 h-auto'/>
+                <h2 className='font-reikna lg:text-6xl text-5xl leading-6 lg:leading-10' >Neira <br/> Basudara</h2>
               </div>
-              <div className='flex flex-col gap-2 lg:mt-4'>
-                <p className=''>KKN-PPM UGM 2024 Periode II Banda Neira</p>
+              <div className='flex flex-col lg:gap-2 lg:mt-4 items-center font-manjari lg:items-start'>
+                <p className='text-center lg:text-left'>KKN-PPM UGM 2024 Periode II Banda Neira</p>
                 <p>neirabasudara.kknugm@gmail.com</p>
                 <p>+62 87123456789</p>
 
               </div>
             </div>
-            <div className='w-1/3 flex flex-col lg:h-72 gap-4'>
-              <p className='text-2xl font-manjari'>Connect with us!</p>
-              <input width="340" height="135" type="text" className='h-64 rounded-lg ' />
-              <Button
-              text = 'SEND'
-              isAction={true}
-              isPrimary={true}
-              />
+
+            <div className='w-1/3 flex-col h-72 gap-4 hidden lg:flex'>
+              <form>
+                <h3 className='text-2xl font-manjari'><label for ='#' name='#'></label>Connect with us!</h3>
+                <textarea name="" id="" cols="30" rows="10" className='rounded-lg p-4 mb-4'></textarea>
+
+                <Button
+                text = 'SEND'
+                isAction={true}
+                isPrimary={true}
+                />
+              </form>
             </div>
 
-            <div className='w-1/3 flex flex-col  justify-around'>
-              <div className='flex justify-around' >
+            <div className='lg:w-1/3 w-full flex flex-col gap-4 lg:gap-8'>
+              <div className='flex justify-between ' >
                 
                 <a href="https://www.instagram.com/neirabasudara/" target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" width="49" height="47" fill="none" viewBox="0 0 49 47">
@@ -50,7 +56,7 @@ const Footer = () => {
                 </a>
                 
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="47" fill="none" viewBox="0 0 50 47">
-                  <g clip-path="url(#a)">
+                  <g clipPath="url(#a)">
                     <path fill="#0F1112" d="M49.254 14.1s-.478-3.24-1.952-4.663c-1.867-1.873-3.953-1.882-4.91-1.992-6.854-.478-17.144-.478-17.144-.478h-.019s-10.29 0-17.143.478c-.957.11-3.043.119-4.91 1.992C1.702 10.86 1.233 14.1 1.233 14.1s-.498 3.81-.498 7.61v3.562c0 3.8.489 7.61.489 7.61s.478 3.24 1.943 4.663c1.866 1.872 4.316 1.808 5.408 2.01 3.924.358 16.664.468 16.664.468s10.3-.018 17.152-.486c.958-.11 3.044-.12 4.91-1.992 1.475-1.423 1.953-4.663 1.953-4.663s.489-3.8.489-7.61V21.71c0-3.8-.489-7.61-.489-7.61ZM20.176 29.595v-13.21l13.237 6.628-13.237 6.582Z"/>
                   </g>
                   <defs>
@@ -61,13 +67,14 @@ const Footer = () => {
                 </svg>
 
               </div>
-              <div className='flex justify-around font-manjari'>
-                <div className='flex-col flex lg:gap-4'>
+
+              <div className='flex font-manjari w-full justify-between'>
+                <div className='flex-col flex justify-around gap-8 lg:gap-8'>
                   <a href="">PODCAST</a>
-                  <a href="">NEWS</a>
+                  <a href="/news" onClick={() => router.push("/news")}>NEWS</a>
                   <a href="">TEAM</a>
                 </div>
-                <div className='flex-col flex lg:gap-4'>
+                <div className='flex-col flex lg:gap-8 gap-4'>
                   <a href="">GALLERY</a>
                   <a href="">ABOUT US</a>
                 </div>
@@ -75,6 +82,21 @@ const Footer = () => {
               </div>
                 
               
+            </div>
+
+            <div className='  flex-col lg:h-72 gap-4 lg:hidden flex w-auto lg:w-full'>
+
+              <form>
+                <h3 className='text-2xl font-manjari'><label for ='#' name='#'></label>Connect with us!</h3>
+                <textarea name="" id="" cols="30" rows="10" className='rounded-lg p-4 mb-4'></textarea>
+
+                <Button
+                text = 'SEND'
+                isAction={true}
+                isPrimary={true}
+                />
+              </form>
+              {/* <input width="740" height="135" type="text" className='w-80 h-48 rounded-lg p-2 items-start' /> */}
             </div>
 
           </div>
