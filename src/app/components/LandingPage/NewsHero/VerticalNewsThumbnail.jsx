@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-const VerticalNewsThumbnail = ({category, date, title, subTitle, imgPath}) => {
+const VerticalNewsThumbnail = ({category, date, title, subTitle, imgPath, withLine}) => {
   return (
-    <div className='w-full max-w-sm flex flex-col font-libre my-6 mx-auto'>
+    <div className={`w-full max-w-sm flex flex-col font-libre mx-auto ${withLine ? '' : 'py-8'}`} >
+      
       <div className='flex mb-5'>
         {/* <div className='w-full h-[193px] bg-slate-700'></div> */}
         <Image src={imgPath} width={200} height={193} alt="thumbnail news" className='w-full'/>
@@ -30,6 +31,7 @@ const VerticalNewsThumbnail = ({category, date, title, subTitle, imgPath}) => {
         <p className='text-xs'>{subTitle} </p>
 
       </div>
+      <hr className={`mx-auto w-full lg:max-w-full lg:mx-0 ${withLine ? 'border-c-green border-[0,5px] my-12' :'hidden'}`}/>
 
       
 
