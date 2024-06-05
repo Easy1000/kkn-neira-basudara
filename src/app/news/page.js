@@ -183,7 +183,7 @@ const Tabs = ({config}) => {
       <div className=' flex flex-wrap lg:flex-col lg:justify-start border-1 border-c-green justify-center gap-5'>
         {
           config.map((entry, index) => (
-            <div className=''>
+            <div key={index} className=''>
               {(entry.header === 'Travel') ?
                 <svg xmlns="http://www.w3.org/2000/svg" className="lg:hidden w-7 h-7 mx-auto" width="21" height="22" fill="none" viewBox="0 0 21 22">
                   <path fill="#fff" fill-rule="evenodd" d="M10.158 0c-2.54 0-3.95.733-3.95.733v2.934L4.217 5.823c-.335.363-.134.97.338 1.007a74.07 74.07 0 0 0 5.603.198c1.245 0 2.343-.026 3.273-.064h-.01a3.94 3.94 0 0 1 .06 1.671 3.82 3.82 0 0 1-.63 1.526 3.46 3.46 0 0 1-1.19 1.065c-.467.25-.982.381-1.503.381-.522 0-1.036-.13-1.504-.381a3.46 3.46 0 0 1-1.19-1.065 3.82 3.82 0 0 1-.63-1.526 3.962 3.962 0 0 1 .06-1.67 69.27 69.27 0 0 1-1.149-.056 5.285 5.285 0 0 0 .021 2.162c.156.71.456 1.373.88 1.94a4.593 4.593 0 0 0 1.565 1.34 4.23 4.23 0 0 0 1.947.478c.674 0 1.339-.163 1.946-.478a4.593 4.593 0 0 0 1.566-1.34c.424-.567.724-1.23.88-1.94.155-.71.163-1.449.02-2.162a58.92 58.92 0 0 0 1.19-.08c.472-.036.674-.643.34-1.006l-1.993-2.156V.733S12.697 0 10.157 0ZM7.337 4.173 5.93 5.696c1.09.059 2.518.11 4.228.11s3.138-.051 4.227-.11L12.98 4.173V1.6l-.17-.049c-.588-.161-1.483-.33-2.651-.33-1.168 0-2.063.169-2.651.33-.06.017-.117.033-.17.05v2.57Z" clip-rule="evenodd"/>
@@ -268,7 +268,7 @@ const Tabs = ({config}) => {
               }
 
                 
-                <h3 className='text-center lg:flex lg:-translate-y-0 lg:flex font-reikna text-2xl -translate-y-3'>
+                <h3 className='text-center lg:-translate-y-0 lg:flex font-reikna text-2xl -translate-y-3'>
                   {entry.header}
                 </h3>
               </div>
