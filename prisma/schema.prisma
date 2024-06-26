@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGODB_URL")
+}
+
+model Artikel {
+  id           String        @id @default(auto()) @map("_id") @db.ObjectId
+  ID           Int           @unique
+  judul        String
+  deskripsi    String
+  thumbnail    String
+  thumbnailAlt String
+  author       String
+  paragraph    Paragraph[]
+  accessories  Accessories[]
+  category     String
+  date         DateTime      @default(now())
+}
+
+model Paragraph {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  artikel   Artikel @relation(fields: [artikelId], references: [id])
+  artikelId String  @db.ObjectId
+  urutan    Int
+  paragraph String
+}
+
+model Accessories {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  artikel     Artikel @relation(fields: [artikelId], references: [id])
+  artikelId   String  @db.ObjectId
+  urutan      Int
+  accessories String
+  caption     String
+}
