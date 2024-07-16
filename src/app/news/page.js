@@ -141,10 +141,10 @@ const News = ({tabs}) => {
       <div className='flex items-center flex-col gap-2 mx-4 mt-36'>
         {/* searchbar */}
         <div className='flex flex-col items-center gap-4 mb-11'>
-          <h1 className='font-reikna text-8xl'>Neira News</h1>
-          <p className='font-libre text-sm -mt-8'>Tellus tristique tellus vel et facilisis amet et id duis!</p>
+          <h1 className='font-reikna text-7xl text-c-green'>Neira's News</h1>
+          <p className='font-libre-franklin text-sm -mt-8'>Tellus tristique tellus vel et facilisis amet et id duis!</p>
           <div className='relative mt-8' >
-            <input className='w-96 bg-transparent border-b-[2px] border-c-green pb-1 pl-2 focus:none' type="text" placeholder="Search news..." />
+            <input className='w-72 bg-transparent border-b-[2px] border-c-green pb-1 pl-2 focus:outline-none' type="text" placeholder="Search news..." />
             <svg xmlns="http://www.w3.org/2000/svg" className='absolute right-1 top-1 w-4 h-4' width="13" height="13" fill="none" viewBox="0 0 13 13">
               <path fill="#5E9599" d="M8.994 7.915h-.568l-.202-.194A4.677 4.677 0 0 0 9.29 3.879c-.338-2-2.007-3.597-4.022-3.842a4.68 4.68 0 0 0-5.23 5.23C.282 7.282 1.879 8.951 3.879 9.29A4.676 4.676 0 0 0 7.72 8.224l.194.202v.568l3.058 3.058a.76.76 0 0 0 1.071 0 .76.76 0 0 0 0-1.072l-3.05-3.065Zm-4.317 0A3.233 3.233 0 0 1 1.44 4.677 3.233 3.233 0 0 1 4.677 1.44a3.233 3.233 0 0 1 3.238 3.237 3.233 3.233 0 0 1-3.238 3.238Z"/>
             </svg>
@@ -180,7 +180,7 @@ const Tabs = ({config}) => {
   const [activeTab, setActiveTab] = useState(0);
   return(
     <div className='mx-5 my-auto max-w-2xl lg:w-full w-[95%] bg-[#0F1112]/50 lg:flex '>
-      <div className=' flex flex-wrap lg:flex-col lg:justify-start border-1 border-c-green justify-center gap-5'>
+      <div className=' flex flex-wrap lg:flex-col lg:justify-start border-1 border-c-green justify-center gap-2'>
         {
           config.map((entry, index) => (
             <div key={index} className=''>
@@ -225,7 +225,7 @@ const Tabs = ({config}) => {
 
               
               <div key={index}
-                className={`lg:flex lg:top-14 transition-transform duration-50 ease-in-out relative py-5 lg:py-0 lg:px-0 lg:h-full px-3 h-20 mt-2 leading-10 z-20 cursor-pointer mx-auto translate-y-[2px] border-2  ${activeTab === index ? `*:text-c-yellow rounded-t-lg border-c-green bg-black border-b-black lg:border-b-c-green lg:border-r-black lg:rounded-l-lg lg:rounded-r-none lg:translate-x-[3px] ` : 'border-c-white h-4 pt-4 lg:h-auto lg:pt-0 rounded-xl backdrop-blur-sm bg-white/15 lg:-translate-x-4'}`}
+                className={`lg:flex lg:top-14 transition-transform duration-50 ease-in-out relative py-5 lg:py-0 lg:px-0 lg:h-full px-2 h-20 mt-2 leading-10 z-20 cursor-pointer mx-auto translate-y-[2px] border-[1px] lg:border-2  ${activeTab === index ? `*:text-c-yellow rounded-t-lg border-c-green bg-black border-b-black lg:border-b-c-green lg:border-r-black lg:rounded-l-lg lg:rounded-r-none lg:translate-x-[3px] ` : 'border-c-white h-4 pt-4 lg:h-auto lg:pt-0 rounded-xl backdrop-blur-sm bg-white/15 lg:-translate-x-4'}`}
                 onClick={() => setActiveTab(index)}
               >
                 {(entry.header === 'Travel') ?

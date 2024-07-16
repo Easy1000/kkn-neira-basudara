@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 const VerticalNewsThumbnail = ({category, date, title, subTitle, imgPath, withLine}) => {
   return (
-    <div className={`w-full max-w-sm flex flex-col font-libre mx-auto ${withLine ? '' : 'py-8'}`} >
+    <div className={`w-full max-w-sm flex flex-col font-libre-franklin mx-auto ${withLine ? '' : 'py-8'}`} >
       
       <div className='flex mb-5'>
         {/* <div className='w-full h-[193px] bg-slate-700'></div> */}
