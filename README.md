@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web KKN Neira Basudara
 
-## Getting Started
+Selamat datang di dokumentasi proyek web KKN Neira Basudara. Proyek ini dibuat untuk mendokumentasikan dan menampilkan output-output dari kegiatan tim KKN kami. Melalui website ini, kami berharap dapat memberikan informasi yang lengkap dan terstruktur mengenai kegiatan-kegiatan yang telah kami lakukan selama program KKN berlangsung.
 
-First, run the development server:
+## Anggota Tim
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Proyek web ini dikerjakan oleh tim yang terdiri dari tiga anggota dengan peran dan tanggung jawab masing-masing sebagai berikut:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Gelora Damayanti Manalu** - Project Manager dan Front End Developer
+- **Izaaz Rahman Akbar** - Backend Developer
+- **Fira** - UI/UX Designer
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Dokumentasi Teknis
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Dokumentasi teknis dari proyek ini tersedia di dalam direktori `docs`. Dokumentasi ini mencakup berbagai aspek teknis dari pengembangan website, termasuk:
 
-## Learn More
+- **Arsitektur Proyek**: Penjelasan tentang struktur dan komponen utama dari aplikasi.
+- **Panduan Instalasi**: Langkah-langkah untuk mengkloning repository, menginstal dependencies, dan menjalankan server pengembangan.
+- **Detail API**: Informasi tentang endpoint API yang digunakan dalam proyek, termasuk metode, parameter, dan contoh respons.
+- **Panduan Deployment**: Petunjuk untuk melakukan deployment aplikasi ke lingkungan produksi.
 
-To learn more about Next.js, take a look at the following resources:
+Untuk mengakses dokumentasi teknis, silakan buka direktori `docs` yang ada di root repository ini.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Terima kasih telah mengunjungi dokumentasi kami. Kami berharap informasi yang disajikan di sini dapat membantu Anda memahami lebih dalam mengenai proyek web KKN Neira Basudara.
