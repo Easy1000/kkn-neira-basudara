@@ -8,7 +8,7 @@ Proyek web ini dikerjakan oleh tim yang terdiri dari tiga anggota dengan peran d
 
 - **Gelora Damayanti Manalu** - Project Manager dan Front End Developer
 - **Izaaz Rahman Akbar** - Backend Developer
-- **Fira** - UI/UX Designer
+- **Syahhaliza Syafira Syahrir** - UI/UX Designer
 
 ## Dokumentasi Teknis
 
