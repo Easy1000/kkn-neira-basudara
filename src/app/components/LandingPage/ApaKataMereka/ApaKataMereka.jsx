@@ -11,7 +11,7 @@ import ProfPurwoDesktop from '/public/images/landing-page/apa-kata-mereka/Prof P
 
 export const ApaKataMereka = () => {
   return (
-    <div className='xl:mt-48 relative '>
+    <div className='xl:mt-48 relative overflow-x-clip'>
       <Image src={BgDesktopCrop} alt='' className='w-full h-auto absolute -z-20 xl:-top-[500px]  opacity-0 xl:opacity-100 translate-y-96 scale-[160%]'/>
       <Image src={BgMobileCrop} alt='' className='w-full h-auto absolute object-cover -z-20 -top-[100px] md:-top-[840px]  xl:hidden'/>
       

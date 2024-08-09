@@ -27,7 +27,7 @@ const Footer = () => {
 
             <div className='w-1/3 flex-col h-72 gap-4 hidden lg:flex'>
               <form>
-                <h3 className='text-2xl font-manjari'><label for ='#' name='#'></label>Connect with us!</h3>
+                <h3 className='text-2xl font-manjari'><label htmlFor ='#' name='#'></label>Connect with us!</h3>
                 <textarea name="" id="" cols="30" rows="10" className='rounded-lg p-4 mb-4'></textarea>
 
                 <Button
@@ -87,7 +87,7 @@ const Footer = () => {
             <div className='  flex-col lg:h-72 gap-4 lg:hidden flex w-auto lg:w-full'>
 
               <form>
-                <h3 className='text-2xl font-manjari'><label for ='#' name='#'></label>Connect with us!</h3>
+                <h3 className='text-2xl font-manjari'><label htmlFor ='#' name='#'></label>Connect with us!</h3>
                 <textarea name="" id="" cols="30" rows="10" className='rounded-lg p-4 mb-4'></textarea>
 
                 <Button

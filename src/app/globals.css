@@ -6,10 +6,57 @@
 html{
   background-color: black;
   color:white;
-  font-family: libre-franklin;
+  
 }
 
 body{
   overflow-x: hidden;
   
 }
+
+@layer base {
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Roboto.woff2) format('woff2');
+  }
+}
+
+@font-face {
+  font-family: 'Reikna';
+  src: url('/fonts/Reikna.ttf');
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manjari';
+  src: url('/fonts/Manjari-Thin.ttf');
+  font-style: thin;
+  font-weight: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Manjari';
+  src: url('/fonts/Manjari-Regular.ttf');
+  font-style: thin;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manjari';
+  src: url('/fonts/Manjari-Bold.ttf');
+  font-style: thin;
+  font-weight: bold;
+  font-display: swap;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+

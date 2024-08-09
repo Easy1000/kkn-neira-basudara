@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Logo from "/public/images/landing-page/LOGO.png";
-import Router from "next/navigation";
+import Link from 'next/link'
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -34,12 +34,13 @@ const Navbar = () => {
     }, [lastScrollY]);
 
     return (
-        <nav className={`fixed top-0 z-[9999] lg:px-20 lg:py-1 w-[90%] lg:mx-20 rounded-full border-[1px] lg:backdrop-blur-2xl backdrop-blur-md lg:drop-shadow-md lg:mt-12 bg-white/10 py-2 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 mt-9 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-36'}`}>
+        <nav className={`fixed top-0 z-[9999] lg:px-20 lg:py-1 w-[90%] lg:mx-20 rounded-full border-[1px] lg:backdrop-blur-2xl backdrop-blur-md lg:drop-shadow-md lg:mt-12 bg-white/10 py-2 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 mt-4 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-72'}`}>
             <div className="flex flex-row w-full justify-between">
-                <a href="#" className="flex items-center lg:gap-4">
+                <Link href='/' className="flex items-center lg:gap-4">
                     <Image src={Logo} alt="logo neira basudara" className="flex lg:w-auto lg:h-12 w-10 ml-4"/>
                     <p className="font-reikna lg:text-4xl lg:flex hidden lg:ml-2">Neira Basudara</p>
-                </a>
+                </Link>
+
 
                 <div className="lg:flex lg:gap-10 xl:gap-32 items-center hidden">
                     <a className='hover:underline' href="/news" onClick={() => router.push("/news")}>NEWS</a>
@@ -62,7 +63,7 @@ const Navbar = () => {
 
                 {/* dropdown component */}
                 {isDropdownOpen && (
-                    <div className="w-200 h-auto fixed z-[9999] drop-shadow-md right-0 top-16 border-[1px] rounded-2xl py-4 px-8 font-manjari visible lg:hidden bg-white/10 backdrop-blur-md">
+                    <div className="w-200 h-auto fixed z-[9999] drop-shadow-md right-0 top-16 border-[1px] rounded-2xl py-4 px-8 font-manjari visible lg:hidden backdrop-blur bg-white/20 ">
                         <div className="flex flex-col items-center gap-2 ">
                             <a className='hover:underline' href="/news" onClick={() => router.push("/news")}>NEWS</a>
                             <a className='hover:underline' href="">PODCAST</a>

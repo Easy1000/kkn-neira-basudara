@@ -34,7 +34,7 @@ const NewsHero = () => {
     router.push('/news'); 
   };
     return (
-      <div className="h-auto lg:w-1/2 relative">
+      <div className="h-auto lg:w-1/2 relative  overflow-x-clip">
         
         <Image src="/images/landing-page/news/bg-news-full.png" width={200} height={200} alt="background news section" className="absolute -z-30 w-[400px] scale-[370%] md:scale-[400%] md:translate-y-56  translate-x-1/2 top-32 lg:hidden" />
         <div className="flex flex-col gap-4">

@@ -99,11 +99,11 @@
         
 
     return (
-        <div className='w-full relative'>
+        <div className='w-full relative  overflow-x-clip'>
             
             <div className='overflow-y-visible relative'>
                 
-                <div className='w-full h-screen  absolute'>
+                <div className='w-full h-screen absolute '>
                     
                     <Image alt='ornamen 1' width={700} height={700} src = '/images/landing-page/konten-interaktif/Group 132.png' className='absolute -z-50 w-full h-auto lg:hidden object-cover scale-[175%]'/>
                 </div>
