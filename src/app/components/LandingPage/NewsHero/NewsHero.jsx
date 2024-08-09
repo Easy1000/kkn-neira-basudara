@@ -13,7 +13,7 @@ const useIsLargeScreen = () => {
 
   useLayoutEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 1000);
+      setIsLargeScreen(window.innerWidth >= 768);
     };
 
     handleResize();

@@ -25,14 +25,14 @@ const Hero = () => {
                 Banda
               </h1>
               <h1 className="font-reikna break-all text-8xl text-right -mt-8 sm:mt-0">  
-                Neira
+                Pedia
               </h1>
             </div>
 
             {/* big screen */}
             <div className='hidden lg:flex'>
               <h1 className="font-reikna text-9xl lg:-mb-10 break-all line-clamp-2 text-wrap text-right mt-4">  
-                Banda Neira
+                Banda Pedia
               </h1>
             </div>
               
