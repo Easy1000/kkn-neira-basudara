@@ -37,3 +37,10 @@ model Accessories {
   accessories String
   caption     String
 }
+
+model Gallery {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  judul   String
+  link    String
+  caption String
+}
