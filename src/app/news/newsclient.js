@@ -14,7 +14,6 @@ const All = ({filteredNews}) => {
         filteredNews.map((entry, index) => (
           <VerticalNewsThumbnail 
             key={index}
-            
             {...entry}
           />
         ))
@@ -89,7 +88,7 @@ const Nature = ({filteredNews}) => {
 
 
 
-const News = ({}) => {
+const News = ({articles}) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
@@ -112,7 +111,7 @@ const News = ({}) => {
 
 
   const filteredNews = articles.filter(entry =>
-    entry.judul.toLowerCase().includes(searchTerm.toLowerCase())
+    entry.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   if (loading) return <p>Loading...</p>;
@@ -183,7 +182,6 @@ const News = ({}) => {
 
         
         <Tabs 
-        // entry is managed based on the config
           config={[
             {header:"All", component:<All filteredNews={filteredNews}/> },
             {header:"Travel", component:<Travel filteredNews={filteredNews}/>},
