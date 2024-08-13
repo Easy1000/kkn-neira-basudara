@@ -11,7 +11,7 @@ const DetailNews = () => {
         <div className='flex flex-col text-center px-8 pt-28'>
           {/* bread crumbs here */} 
           <div>
-            <h1>Neira's News</h1>
+            <h1>Neira&apos;s News</h1>
             <p>Food</p>
           </div>
 
