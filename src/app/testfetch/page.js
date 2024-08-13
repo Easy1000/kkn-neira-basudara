@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-// import VerticalNewsThumbnail from '../components/LandingPage/NewsHero/VerticalNewsThumbnail';
+import VerticalNewsThumbnail from '../components/LandingPage/NewsHero/VerticalNewsThumbnail';
 
 // Fetch data directly in the server component
 export default async function TestFetch() {
