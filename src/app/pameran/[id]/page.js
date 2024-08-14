@@ -25,7 +25,7 @@ export default async function Karya({ params }) {
           month: 'long',
           day: 'numeric'
         })}</p>
-        <p className='text-lg text-gray-600 mt-4'></p>
+        <p className='text-lg text-gray-600 mt-4'>{karya.deskripsi}</p>
       </div>
 
       {/* Body */}
