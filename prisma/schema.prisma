@@ -32,7 +32,7 @@ model Pameran {
   paragraph    Paragraph[]
   accessories  Accessories[]
   category     String
-  date         DateTime      @default(now())
+  date         DateTime?     @default(now())
 }
 
 model Paragraph {
