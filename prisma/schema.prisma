@@ -21,19 +21,37 @@ model Artikel {
   date         DateTime      @default(now())
 }
 
+model Pameran {
+  id           String        @id @default(auto()) @map("_id") @db.ObjectId
+  ID           Int           @unique
+  judul        String
+  deskripsi    String
+  thumbnail    String
+  thumbnailAlt String
+  author       String
+  paragraph    Paragraph[]
+  accessories  Accessories[]
+  category     String
+  date         DateTime?     @default(now())
+}
+
 model Paragraph {
-  id        String  @id @default(auto()) @map("_id") @db.ObjectId
-  artikel   Artikel @relation(fields: [artikelId], references: [id])
-  artikelId String  @db.ObjectId
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  artikel   Artikel? @relation(fields: [artikelId], references: [id])
+  artikelId String?  @db.ObjectId
   urutan    Int
   paragraph String
+  Pameran   Pameran? @relation(fields: [pameranId], references: [id])
+  pameranId String?  @db.ObjectId
 }
 
 model Accessories {
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
-  artikel     Artikel @relation(fields: [artikelId], references: [id])
-  artikelId   String  @db.ObjectId
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  artikel     Artikel? @relation(fields: [artikelId], references: [id])
+  artikelId   String?  @db.ObjectId
   urutan      Int
   accessories String
   caption     String
+  Pameran     Pameran? @relation(fields: [pameranId], references: [id])
+  pameranId   String?  @db.ObjectId
 }
