@@ -20,11 +20,11 @@ export default async function Karya({ params }) {
         />
         <h1 className='text-4xl font-bold mt-4'>{karya.judul}</h1>
         <p className='text-xl text-gray-700 mt-2'>Oleh {karya.author}</p>
-        <p className='text-md text-gray-500 mt-1'>Dibuat pada {new Date(karya.date).toLocaleDateString('id-ID', {
+        {karya.date && <p className='text-md text-gray-500 mt-1'>Dibuat pada {new Date(karya.date).toLocaleDateString('id-ID', {
           year: 'numeric',
           month: 'long',
           day: 'numeric'
-        })}</p>
+        })}</p>}
         <p className='text-lg text-gray-600 mt-4'>{karya.deskripsi}</p>
       </div>
 
