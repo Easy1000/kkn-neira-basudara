@@ -151,7 +151,7 @@ const News = ({}) => {
         
         <div className='flex flex-col items-center gap-4 mb-11'>
           <div className='flex w-auto'>
-            <h1 className='font-reikna text-7xl text-c-green lg:text-white lg:pr-12'>Neira's News</h1>
+            <h1 className='font-reikna text-7xl text-c-green lg:text-white lg:pr-12'>Neira&apos;s News</h1>
             <div className=' mt-8 hidden lg:flex ' >
               <input 
                 className='w-[700px] backdrop-blur-lg border-2 border-c-green pl-4 focus:outline-none rounded-full bg-white/10 lg:-translate-y-4' 

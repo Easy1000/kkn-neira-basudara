@@ -46,7 +46,7 @@ export default function News() {
           </div>
         ))
       ) : (
-        <p>No articles found matching "{searchTerm}".</p>
+        <p>No articles found matching &quot;{searchTerm}&quot;.</p>
       )}
     </div>
   );

@@ -89,7 +89,7 @@ const Nature = ({filteredNews}) => {
 
 
 const News = ({articles}) => {
-  const [articles, setArticles] = useState([]);
+  const [listArticles, setListArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -98,7 +98,7 @@ const News = ({articles}) => {
       try {
         const response = await fetch('/api/article');
         const data = await response.json();
-        setArticles(data.articles);
+        setListArticles(data.articles);
       } catch (error) {
         console.error("Failed to fetch articles:", error);
       } finally {
@@ -150,7 +150,7 @@ const News = ({articles}) => {
         
         <div className='flex flex-col items-center gap-4 mb-11'>
           <div className='flex w-auto'>
-            <h1 className='font-reikna text-7xl text-c-green lg:text-white lg:pr-12'>Neira's News</h1>
+            <h1 className='font-reikna text-7xl text-c-green lg:text-white lg:pr-12'>Neira&apos;s News</h1>
             <div className=' mt-8 hidden lg:flex ' >
               <input 
                 className='w-[700px] backdrop-blur-lg border-2 border-c-green pl-4 focus:outline-none rounded-full bg-white/10 lg:-translate-y-4' 
