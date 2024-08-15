@@ -4,13 +4,9 @@ const VerticalNewsThumbnail = ({category, tanggal, judul, deskripsi, thumbnail})
   console.log(thumbnail)
   return (
     <div className={`w-full max-w-sm flex flex-col font-libre-franklin mx-auto lg:max-w-[2000px] `} >
-      <div className='flex flex-col lg:flex-row-reverse lg:gap-8'>
-        <div className='flex mb-5'>
-          {/* <div className='w-full h-[193px] bg-slate-700'></div> */}
-          {/* <Image src={thumbnail} width={200} height={193} alt="thumbnail news" className='w-full lg:w-[500px] lg:object-cover lg:h-full'/> */}
-          {/* <iframe src="https://drive.google.com/file/d/1bC6d3_E13Ktw0f2U60zcDWKiNhbbj8kv/preview" className='w-full lg:w-[500px] lg:object-cover lg:h-full'></iframe> */}
-          <img src="https://drive.google.com/uc?export=view&id=1bC6d3_E13Ktw0f2U60zcDWKiNhbbj8kv" width={200} height={150} alt="thumbnail news"  className='w-full lg:w-[500px] lg:object-cover lg:h-full' />
-
+      <div className='flex flex-col lg:flex-row-reverse lg:gap-8 hover:cursor-pointer group'>
+        <div className='flex mb-5 overflow-clip'>
+          <img src={thumbnail} width={200} height={150} alt="thumbnail news"  className='w-full group-hover:scale-105 transition-transform lg:w-[600px] object-cover lg:h-full' />
         </div>
 
         <div className='flex lg:flex-col lg:justify-between'>
@@ -29,8 +25,8 @@ const VerticalNewsThumbnail = ({category, tanggal, judul, deskripsi, thumbnail})
                 <p className='text-xs lg:hidden'>{tanggal}</p>
             </div>
 
-            <div className='flex font-manjari mb-2'>
-              <h2 className='hover:underline text-xl font-bold leading-snug lg:text-2xl'>{judul}</h2>
+            <div className='flex font-manjari mb-2 hover:cursor-pointer'>
+              <h2 className='text-xl font-bold leading-snug lg:text-2xl group-hover:underline'>{judul}</h2>
 
             </div>
             <div className='flex'>
