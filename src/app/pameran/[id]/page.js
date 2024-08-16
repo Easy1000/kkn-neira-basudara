@@ -70,3 +70,11 @@ export const getKarya = cache(async (id) => {
 
   return { karya, karyaBody }
 })
+
+export async function generateStaticParams() {
+  const listKarya = await prisma.pameran.findMany()
+
+  return listKarya.map(karya => ({
+    id: karya.ID.toString()
+  }))
+}
