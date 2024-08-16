@@ -55,3 +55,10 @@ model Accessories {
   Pameran     Pameran? @relation(fields: [pameranId], references: [id])
   pameranId   String?  @db.ObjectId
 }
+
+model Gallery {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  judul   String
+  link    String
+  caption String
+}
