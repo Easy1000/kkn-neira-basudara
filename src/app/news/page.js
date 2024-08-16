@@ -3,91 +3,11 @@ import { useEffect, useState } from "react";
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import VerticalNewsThumbnail from '../components/LandingPage/NewsHero/VerticalNewsThumbnail';
+import Image from "next/image";
 // import newsData from '../components/LandingPage/NewsHero/newsdata.json';
-
-
-// container for categories
-const All = ({filteredNews}) => {
-  return (
-    <div className='flex flex-col gap-4 '>
-      {
-        filteredNews.map((entry, index) => (
-          <VerticalNewsThumbnail 
-            key={index}
-            
-            {...entry}
-          />
-        ))
-      }
-    </div>
-  )
-};
-
-const Travel = ({filteredNews}) => {
-  const travelNewsData = filteredNews.filter(entry => entry.category === "travel");
-  return (
-    <div className='flex flex-col gap-4 '>
-      {
-        travelNewsData.map((entry, index) => (
-          <VerticalNewsThumbnail 
-            key={index}
-            {...entry}
-          />
-        ))
-      }
-    </div>
-  );
-};
-
-const Food = ({filteredNews}) => {
-  const foodNewsData = filteredNews.filter(entry => entry.category === "food");
-  return (
-    <div className='flex flex-col gap-4 '>
-      {
-        foodNewsData.map((entry, index) => (
-          <VerticalNewsThumbnail 
-            key={index}
-            {...entry}
-          />
-        ))
-      }
-    </div>
-  );
-};
-
-const Culture = ({filteredNews}) => {
-  const cultureNewsData = filteredNews.filter(entry => entry.category === "culture");
-  return (
-    <div className='flex flex-col gap-4 '>
-      {
-        cultureNewsData.map((entry, index) => (
-          <VerticalNewsThumbnail 
-            key={index}
-            {...entry}
-          />
-        ))
-      }
-    </div>
-  );
-};
-
-const Nature = ({filteredNews}) => {
-  const natureNewsData = filteredNews.filter(entry => entry.category === "nature");
-  return (
-    <div className='flex flex-col gap-4 '>
-      {
-        natureNewsData.map((entry, index) => (
-          <VerticalNewsThumbnail 
-            key={index}
-            {...entry}
-          />
-        ))
-      }
-    </div>
-  );
-};
-
-
+import DoubleOrnament from "/public/images/landing-page/news/double-ornament-bg.png";
+import SingleOrnament from "/public/images/landing-page/news/single-ornament-bg.png";
+import Link from 'next/link';
 
 const News = ({}) => {
   const [articles, setArticles] = useState([]);
@@ -115,15 +35,46 @@ const News = ({}) => {
     entry.judul.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  console.log(filteredNews.category)
-
-  // if (loading) return <p>Loading...</p>;
-
   return (
     <div className=''>
       <Navbar />
       {/* gradient background */}
-      <div className='relative w-full overflow-x-clip'>
+      <div className='relative w-full overflow-x-clip '>
+        <div className="invinsible lg:visible -z-10 w-full scale-125 absolute flex items-center justify-center">
+          {/* desktop bg */}
+          <svg xmlns="http://www.w3.org/2000/svg" width="2433" height="1740" fill="none" viewBox="0 0 2433 2740" className="opacity-60">
+            <g filter="url(#a)">
+              <path fill="url(#b)" fillOpacity=".74" d="M1766.89 2661.04c196.05 27.87 400.48-104.5 478.11-340.47 77.62-235.97 65.6-606.53 107.98-891.03 27.61-185.35-85.42-590.455-290.15-606.388-204.73-15.934-357.17-69.3-591.6-123.713-234.42-54.412-367.76-237.822-523.868-422.464C791.254 92.333 321.621-6.042 226.737 159.684 131.852 325.41 81.338 491.705 75.706 639.338c-5.633 147.633 79.627 953.222 237.773 1147.092 158.146 193.87 760.381 198.86 829.001 343 68.61 144.14 379.36 496.77 624.41 531.61Z"/>
+            </g>
+            <defs>
+              <linearGradient id="b" x1="1504.58" x2="-810.927" y1="3437.72" y2="569.841" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#FAB874" stopOpacity=".51"/>
+                <stop offset=".592" stopColor="#1F3233"/>
+                <stop offset=".75" stopColor="#629A9D" stopOpacity=".4"/>
+                <stop offset="1" stopColor="#223637"/>
+              </linearGradient>
+              <filter id="a" width="2431.65" height="2739.63" x=".443" y=".078" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur result="effect1_foregroundBlur_574_344" stdDeviation="37.5"/>
+              </filter>
+            </defs>
+          </svg>
+
+
+        </div>
+        <div className="absolute -z-10 scale-[30%] opacity-60 -right-72 -top-[500px] invisible lg:visible">
+          <Image src={SingleOrnament} />
+        </div>
+        <div className="absolute -z-10 scale-[80%] top-[500px] -left-24 invisible lg:visible" >
+          <Image src={DoubleOrnament} />
+        </div>
+        <div className="absolute -z-10 scale-[40%] -right-[500px] opacity-80 top-[1000px] invisible lg:visible">
+          <Image src={SingleOrnament} />
+        </div>
+
+         
+
         <div className='absolute -z-20 lg:hidden -left-72 right-0 mx-auto w-96 -top-72 scale-[60%] md:scale-[200%]'>
           <svg xmlns="http://www.w3.org/2000/svg" width="760" height="1801" fill="none" viewBox="0 0 760 1801">
           <g filter="url(#a)">
@@ -197,7 +148,7 @@ const News = ({}) => {
         />
 
       </div>
-
+      <div className="w-72 h-[1200px]"></div>
       <Footer />
 
     </div>
@@ -205,6 +156,132 @@ const News = ({}) => {
 }
 
 export default News
+
+
+// container for categories
+const All = ({ filteredNews }) => {
+  return (
+    <div className="flex flex-col gap-4">
+      {filteredNews.length === 0 ? (
+        <NewsNotFound />
+      ) : (
+        filteredNews.map((entry, index) => (
+          <Link href={`/news/${entry.ID}`} key={entry.id}>
+            <VerticalNewsThumbnail key={index} {...entry} />
+          </Link>
+        ))
+      )}
+    </div>
+  );
+};
+
+
+const Travel = ({filteredNews}) => {
+  const travelNewsData = filteredNews.filter(entry => entry.category === "travel");
+  return (
+    <div className='flex flex-col gap-4 '>
+      {
+
+        travelNewsData.length === 0 ? 
+
+        (<NewsNotFound />          )
+          :
+          (
+        travelNewsData.map((entry, index) => (
+          <Link href={`/news/${entry.ID}`} key={entry.id}>
+          <VerticalNewsThumbnail 
+            key={index}
+            {...entry}
+          />
+          </Link>
+        ))
+        )
+          
+      }
+
+      
+    </div>
+  );
+};
+
+const Food = ({filteredNews}) => {
+  const foodNewsData = filteredNews.filter(entry => entry.category === "food");
+  return (
+    <div className='flex flex-col gap-4 '>
+        {
+
+        foodNewsData.length === 0 ? 
+
+        (<NewsNotFound />)
+          :
+          (
+        foodNewsData.map((entry, index) => (
+          <Link href={`/news/${entry.ID}`} key={entry.id}>
+          <VerticalNewsThumbnail 
+            key={index}
+            {...entry}
+          />
+          </Link>
+        ))
+        )
+          
+        }
+    </div>
+  );
+};
+
+const Culture = ({filteredNews}) => {
+  const cultureNewsData = filteredNews.filter(entry => entry.category === "culture");
+  return (
+    <div className='flex flex-col gap-4 '>
+       {
+
+        cultureNewsData.length === 0 ? 
+
+        (<NewsNotFound />)
+          :
+          (
+        cultureNewsData.map((entry, index) => (
+          <Link href={`/news/${entry.ID}`} key={entry.id}>
+          <VerticalNewsThumbnail 
+            key={index}
+            {...entry}
+          />
+          </Link>
+        ))
+        )
+          
+      }
+    </div>
+  );
+};
+
+const Nature = ({filteredNews}) => {
+  const natureNewsData = filteredNews.filter(entry => entry.category === "nature");
+  return (
+    <div className='flex flex-col gap-4 '>
+      {
+
+        natureNewsData.length === 0 ? 
+
+        (<NewsNotFound />)
+          :
+          (
+        natureNewsData.map((entry, index) => (
+          <Link href={`/news/${entry.ID}`} key={entry.id}>
+          <VerticalNewsThumbnail 
+            key={index}
+            {...entry}
+          />
+          </Link>
+        ))
+        )
+          
+      }
+    </div>
+  );
+};
+
 
 
 const Tabs = ({config}) => {
@@ -312,13 +389,39 @@ const Tabs = ({config}) => {
       </div>
       
         {/* mapping news based on active tab */}
-      <div className='border-2 border-c-green rounded-xl lg:rounded-3xl px-4 lg:px-12 bg-[#0F1112]/50'>
+      <div className='border-2 border-c-green rounded-xl lg:rounded-3xl px-4 lg:px-12 bg-[#0F1112]/50 -mb-32'>
         <div className='bg-transparent w-full h-8 lg:w-60'></div>
         <hr className='mx-auto max-w-sm lg:max-w-[2000px] border-c-green border-[0,5px] mb-6'/>
         {config[activeTab].component}
         
 
       </div>
+    </div>
+  )
+}
+
+
+const NewsNotFound = () => {
+  return(
+    <div className="relative w-full">
+      <div className="flex flex-col lg:flex-row items-center lg:gap-20 mt-36">
+        <div className="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" width="95" height="101" fill="none" viewBox="0 0 95 101" className="lg:scale-150 lg:ml-6 scale-100">
+            <circle cx="41.663" cy="41.663" r="39.188" stroke="#fff" strokeWidth="4.95"/>
+            <circle cx="28.05" cy="30.525" r="4.95" fill="#fff"/>
+            <circle cx="53.626" cy="30.525" r="4.95" fill="#fff"/>
+            <path stroke="#fff" strokeWidth="1.65" d="M23.1 59.4c10.312-19.387 28.875-19.387 37.95 0"/>
+            <path stroke="#fff" strokeWidth="4.95" d="M66 73.425 93.225 99"/>
+          </svg>
+        </div>
+
+        <div className="flex flex-col text-center font-manjari my-6 lg:text-left">
+          <h3 className="font-bold text-3xl">Konten Tidak Ditemukan</h3>
+          <p className="max-w-xs">Tellus tristique tellus vel et facilisis amet et id duis. Erat vitae nec libero.</p>
+          
+        </div>
+      </div>
+
     </div>
   )
 }
