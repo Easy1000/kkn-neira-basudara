@@ -1,15 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
-const VerticalNewsThumbnail = ({category, tanggal, judul, deskripsi, thumbnail}) => {
+const VerticalNewsThumbnail = ({category, tanggal, judul, deskripsi, thumbnail, author, date}) => {
   console.log(thumbnail)
   return (
     <div className={`w-full max-w-sm flex flex-col font-libre-franklin mx-auto lg:max-w-[2000px] `} >
       <div className='flex flex-col lg:flex-row-reverse lg:gap-8 hover:cursor-pointer group'>
-        <div className='flex mb-5 overflow-clip'>
-          <img src={thumbnail} width={200} height={150} alt="thumbnail news"  className='w-full group-hover:scale-105 transition-transform lg:w-[600px] object-cover lg:h-full' />
+        <div className='flex mb-5 overflow-clip lg:w-1/3'>
+          <img src={thumbnail} width={200} height={150} alt="thumbnail news"  className='w-full group-hover:scale-105 transition-transform object-cover lg:h-full' />
         </div>
 
-        <div className='flex lg:flex-col lg:justify-between'>
+        <div className='flex lg:flex-col lg:justify-between lg:w-2/3'>
           <div className='flex flex-col'>
             <div className='flex justify-between items-center mb-5'>
             
@@ -36,9 +36,10 @@ const VerticalNewsThumbnail = ({category, tanggal, judul, deskripsi, thumbnail})
             
           </div>
 
-          <div className='flex justify-between lg:mt-8'>
-            <p className='hidden text-xs lg:flex'>{tanggal}</p>
-            <p className='hidden text-xs lg:flex'>Author</p>
+          <div className='flex justify-between lg:mt-6'>
+            {/* <p className='hidden text-xs lg:flex'>{tanggal}</p> */}
+            <p className='flex justify-center text-xs'>{new Date(date).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+            <p className='hidden text-xs lg:flex'>{author}</p>
 
 
           </div>

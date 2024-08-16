@@ -404,7 +404,7 @@ const Tabs = ({config}) => {
 const NewsNotFound = () => {
   return(
     <div className="relative w-full">
-      <div className="flex flex-col lg:flex-row items-center lg:gap-20 mt-36">
+      <div className="flex flex-col lg:flex-row items-center lg:gap-20 lg:mt-36">
         <div className="flex">
           <svg xmlns="http://www.w3.org/2000/svg" width="95" height="101" fill="none" viewBox="0 0 95 101" className="lg:scale-150 lg:ml-6 scale-100">
             <circle cx="41.663" cy="41.663" r="39.188" stroke="#fff" strokeWidth="4.95"/>
