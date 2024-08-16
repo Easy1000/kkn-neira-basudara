@@ -19,7 +19,7 @@ export default async function Karya({ params }) {
           className='w-full h-auto max-w-lg mx-auto object-cover rounded-lg shadow-lg'
         />
         <h1 className='text-4xl font-bold mt-4'>{karya.judul}</h1>
-        <p className='text-xl text-gray-700 mt-2'>Oleh {karya.author}</p>
+        {karya.author && <p className='text-xl text-gray-700 mt-2'>Oleh {karya.author}</p>}
         {karya.date && <p className='text-md text-gray-500 mt-1'>Dibuat pada {new Date(karya.date).toLocaleDateString('id-ID', {
           year: 'numeric',
           month: 'long',
@@ -70,3 +70,11 @@ export const getKarya = cache(async (id) => {
 
   return { karya, karyaBody }
 })
+
+export async function generateStaticParams() {
+  const listKarya = await prisma.pameran.findMany()
+
+  return listKarya.map(karya => ({
+    id: karya.ID.toString()
+  }))
+}
