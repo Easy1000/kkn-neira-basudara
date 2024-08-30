@@ -14,7 +14,7 @@ const Footer = () => {
           <Image src={TransisiFooter} alt='' className='w-full h-auto -z-30 object-cover' />
           
           <div className='flex bg-c-yellow w-full'>
-            <div className='flex w-[60%] max-w-sm lg:max-w-full 2xl:max-w-[80%] mx-auto lg:px-12 lg:w-full lg:h-[450px] h-[1050px] lg:-translate-y-10 justify-around lg:gap-32 lg:flex-row flex-col items-center gap-14 '>
+            <div className='flex w-[60%] max-w-sm lg:max-w-full 2xl:max-w-[80%] mx-auto lg:px-12 lg:w-full lg:h-[450px] h-[950px] lg:-translate-y-10 lg:justify-around lg:gap-32 lg:flex-row flex-col items-center gap-14 '>
               <div className='lg:w-1/3 flex flex-col gap-4'>
                 
                 <div className='flex flex-col items-center lg:items-start lg:gap-4 gap-4'>
@@ -24,7 +24,7 @@ const Footer = () => {
                     <Image width={100} height={100} src={LogoNeira} alt='logo neira basudara' className='w-10 lg:w-14  h-auto'/>
                   </div>
                 </div>
-                <div className='flex flex-col lg:gap-2 lg:mt-0 items-center font-manjari lg:items-start'>
+                <div className='flex flex-col lg:gap-2 lg:mt-0 items-center qfont-manjari lg:items-start'>
                   <h2 className='font-reikna lg:text-6xl text-5xl leading-6 lg:leading-10 text-center lg:text-left'>Neira Basudara</h2>
                   <p className='text-center lg:text-left mt-4 lg:mt-0'>KKN-PPM UGM 2024 Periode II Banda Neira</p>
                   <p>neirabasudara.kknugm@gmail.com</p>
@@ -83,7 +83,7 @@ const Footer = () => {
                     <a href="">TEAM</a>
                   </div>
                   <div className='flex-col flex lg:gap-8 gap-4 text-end'>
-                    <a href="">GALLERY</a>
+                    <a href="" onClick={() => router.push("/gallery")}>GALLERY</a>
                     <a href="">ABOUT US</a>
                   </div>
 
