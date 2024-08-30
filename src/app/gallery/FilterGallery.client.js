@@ -107,9 +107,9 @@ const FilterGallery = ({ sampleGalleryData }) => {
                             <Image
                                 src={selectedImage.path}
                                 alt={selectedImage.description}
-                                className="max-w-full max-h-full object-contain"
-                                width={800}
-                                height={800}
+                                className="max-w-auto max-h-[700px] object-contain"
+                                width={600}
+                                height={600}
                             />
                             <p className="text-sm mx-auto max-w-xl text-center mt-2">{selectedImage.description}</p>
                             <button onClick={prevImage} className="absolute left-4 top-1/2 transform -translate-y-14 text-white text-2xl z-10  lg:-translate-x-40">
