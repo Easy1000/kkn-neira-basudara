@@ -84,8 +84,8 @@ const FilterGallery = ({ sampleGalleryData }) => {
                 {filteredData.map((item, index) => (
                     <div key={item.id} onClick={() => openPopup(index)} className="cursor-pointer">
                         <Image
-                            src={item.path}
-                            alt="sample"
+                            src={item.link}
+                            alt={item.caption}
                             className="w-40 h-40 lg:w-[450px] lg:h-[450px] object-cover"
                             width={450}
                             height={450}
@@ -105,13 +105,13 @@ const FilterGallery = ({ sampleGalleryData }) => {
                         {/* Image and arrows */}
                         <div className="relative">
                             <Image
-                                src={selectedImage.path}
-                                alt={selectedImage.description}
+                                src={selectedImage.link}
+                                alt={selectedImage.caption}
                                 className="max-w-auto max-h-[700px] object-contain"
                                 width={600}
                                 height={600}
                             />
-                            <p className="text-sm mx-auto max-w-xl text-center mt-2">{selectedImage.description}</p>
+                            <p className="text-sm mx-auto max-w-xl text-center mt-2">{selectedImage.caption}</p>
                             <button onClick={prevImage} className="absolute left-4 top-1/2 transform -translate-y-14 text-white text-2xl z-10  lg:-translate-x-40">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="52" fill="none" viewBox="0 0 30 52">
                                     <path stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="7.333" d="M26 4 4 26l22 22" />
