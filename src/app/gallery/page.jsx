@@ -5,11 +5,13 @@ import OrnamentLeft from "/public/images/neira-gallery/ornament-left.png";
 import OrnamentRight from "/public/images/neira-gallery/ornament-right.png";
 import OrnamentLeftDesktop from "/public/images/neira-gallery/ornament-left-desktop.png";
 import OrnamentRightDesktop from "/public/images/neira-gallery/ornament-right-desktop.png";
-import sampleGalleryData from "./sampleGalleryData";
 import FilterGallery from './FilterGallery.client';
+import { cache } from 'react';
+import { prisma } from '../../../prisma/prisma';
 
-function Gallery() {
-  
+async function Gallery() {
+  const listImages = await getListImages()
+
   return (
     <div className="">
       <Navbar />
@@ -22,14 +24,20 @@ function Gallery() {
 
       <div className="mt-24 lg:mt-44 flex flex-col justify-center ">
         <h1 className="font-reikna text-c-green text-6xl text-center lg:text-7xl">Neira Gallery</h1>
-      </div>  
+      </div>
 
-      <FilterGallery sampleGalleryData={sampleGalleryData} />
+      <FilterGallery sampleGalleryData={listImages} />
 
 
       <Footer />
     </div>
   );
 }
+
+export const getListImages = cache(async () => {
+  const listImages = await prisma.gallery.findMany()
+
+  return listImages
+})
 
 export default Gallery;

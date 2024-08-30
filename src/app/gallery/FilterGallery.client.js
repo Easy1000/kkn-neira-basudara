@@ -89,8 +89,8 @@ const FilterGallery = ({ sampleGalleryData }) => {
                 {filteredData.map((item, index) => (
                     <div key={item.id} onClick={() => openPopup(index)} className="cursor-pointer">
                         <img
-                            src={item.path}
-                            alt={item.description}
+                            src={item.link}
+                            alt={item.caption}
                             className="w-40 h-40 lg:w-[450px] lg:h-[450px] object-cover"
                             width={450}
                             height={450}
@@ -104,8 +104,8 @@ const FilterGallery = ({ sampleGalleryData }) => {
                     <div className="relative">
                         <button onClick={closePopup} className="absolute top-4 right-4 text-white text-2xl">&times;</button>
                         <Image
-                            src={selectedImage.path}
-                            alt={selectedImage.description}
+                            src={selectedImage.link}
+                            alt={selectedImage.caption}
                             className="max-w-full max-h-full"
                             width={800}
                             height={800}
