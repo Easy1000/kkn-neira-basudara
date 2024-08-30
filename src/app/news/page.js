@@ -143,7 +143,7 @@ const News = ({}) => {
         />
 
       </div>
-      <div className="w-72 lg:h-[800px]"></div>
+      {/* <div className="w-72 lg:h-[800px]"></div> */}
       <Footer />
 
     </div>
