@@ -25,7 +25,7 @@ function Gallery() {
       </div>  
 
       <FilterGallery sampleGalleryData={sampleGalleryData} />
-
+      
 
       <Footer />
     </div>
