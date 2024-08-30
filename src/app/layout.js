@@ -11,7 +11,7 @@ const libre = Libre_Franklin({
 });
 
 export const metadata = {
-  title: "Banda Neira - Neira Basudara",
+  title: "Banda Pedia - Neira Basudara",
   description: "Tim KKN-PPN UGM Periode II 2024",
 };
 

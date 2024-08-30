@@ -110,13 +110,10 @@ const News = ({}) => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 />
-              {/* <svg xmlns="http://www.w3.org/2000/svg" className='absolute right-1 top-1 w-4 h-4' width="13" height="13" fill="none" viewBox="0 0 13 13">
-                <path fill="#5E9599" d="M8.994 7.915h-.568l-.202-.194A4.677 4.677 0 0 0 9.29 3.879c-.338-2-2.007-3.597-4.022-3.842a4.68 4.68 0 0 0-5.23 5.23C.282 7.282 1.879 8.951 3.879 9.29A4.676 4.676 0 0 0 7.72 8.224l.194.202v.568l3.058 3.058a.76.76 0 0 0 1.071 0 .76.76 0 0 0 0-1.072l-3.05-3.065Zm-4.317 0A3.233 3.233 0 0 1 1.44 4.677 3.233 3.233 0 0 1 4.677 1.44a3.233 3.233 0 0 1 3.238 3.237 3.233 3.233 0 0 1-3.238 3.238Z"/>
-              </svg> */}
 
             </div>
           </div>
-          <p className='font-libre-franklin text-sm -mt-8 lg:hidden'>Tellus tristique tellus vel et facilisis amet et id duis!</p>
+          <p className='font-libre text-sm -mt-8 lg:hidden'>Tellus tristique tellus vel et facilisis amet et id duis!</p>
           <div className='relative mt-8 lg:hidden' >
             <input 
               className='w-72 bg-transparent border-b-[2px] border-c-green pb-1 pl-2 focus:outline-none ' 

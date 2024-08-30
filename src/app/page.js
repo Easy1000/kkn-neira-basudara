@@ -13,10 +13,6 @@ import React from "react";
 export default function Home() {
   return (
     <main>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap"
-          rel="stylesheet"
-        />
       <Navbar />
       <Hero />
       <div className="w-auto h-auto mt-32 z-30 flex flex-col lg:flex-row lg:mx-48 lg:gap-12 gap-20">
