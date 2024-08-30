@@ -1,25 +1,31 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import Logo from '/public/images/landing-page/LOGO.png'
+import LogoNeira from '/public/images/landing-page/LOGO.png'
+import LogoKKN from '/public/images/landing-page/footer/logo-kkn.png'
+import LogoUGM from '/public/images/landing-page/footer/logo-ugm.png'
 import TransisiFooter from '/public/images/landing-page/footer/TransisiFooter.png'
 import Button from '../Button/Button'
 
 const Footer = () => {
   return (
     <div className='w-full h-auto relative'>
-        <footer className='z-20 text-black bg-c-yellow lg:pb-20 pb-12'>
-          <Image src={TransisiFooter} alt='' className='w-full h-auto bg-[#0F1112] -z-30 object-cover ' />
+        <footer className='z-20 text-black bg-c-yellow pb-12'>
+          <Image src={TransisiFooter} alt='' className='w-full h-auto bg-[#0F1112] -z-30 object-cover' />
           
           <div className='flex w-[60%] max-w-sm lg:max-w-full 2xl:max-w-[80%] mx-auto lg:px-12 lg:w-full h-auto justify-around lg:gap-32 lg:flex-row flex-col items-center gap-14 '>
-            <div className='lg:w-1/3 flex flex-col items-center gap-4'>
+            <div className='lg:w-1/3 flex flex-col gap-4'>
               
-              <div className='flex items-center lg:gap-4 gap-4'>
-                <Image src={Logo} alt='logo neira basudara' className='w-28 xl:w-40 h-auto'/>
-                <h2 className='font-reikna lg:text-6xl text-5xl leading-6 lg:leading-10' >Neira <br/> Basudara</h2>
+              <div className='flex flex-col items-center lg:items-start lg:gap-4 gap-4'>
+                <div className='flex gap-1 '>
+                  <Image width={100} height={100} src={LogoUGM} alt='logo neira ugm' className='w-10 lg:w-14 h-auto'/>
+                  <Image width={100} height={100} src={LogoKKN} alt='logo neira kkn' className='w-10 lg:w-14  h-auto '/>
+                  <Image width={100} height={100} src={LogoNeira} alt='logo neira basudara' className='w-10 lg:w-14  h-auto'/>
+                </div>
               </div>
-              <div className='flex flex-col lg:gap-2 lg:mt-4 items-center font-manjari lg:items-start'>
-                <p className='text-center lg:text-left'>KKN-PPM UGM 2024 Periode II Banda Neira</p>
+              <div className='flex flex-col lg:gap-2 lg:mt-0 items-center font-manjari lg:items-start'>
+                <h2 className='font-reikna lg:text-6xl text-5xl leading-6 lg:leading-10 text-center lg:text-left'>Neira Basudara</h2>
+                <p className='text-center lg:text-left mt-4 lg:mt-0'>KKN-PPM UGM 2024 Periode II Banda Neira</p>
                 <p>neirabasudara.kknugm@gmail.com</p>
                 <p>+62 87123456789</p>
 
@@ -75,7 +81,7 @@ const Footer = () => {
                   <a href="/news" onClick={() => router.push("/news")}>NEWS</a>
                   <a href="">TEAM</a>
                 </div>
-                <div className='flex-col flex lg:gap-8 gap-4'>
+                <div className='flex-col flex lg:gap-8 gap-4 text-end'>
                   <a href="">GALLERY</a>
                   <a href="">ABOUT US</a>
                 </div>
@@ -99,6 +105,9 @@ const Footer = () => {
               </form>
               {/* <input width="740" height="135" type="text" className='w-80 h-48 rounded-lg p-2 items-start' /> */}
             </div>
+
+            </div>
+            <div className='w-full lg:h-20'>
 
           </div>
         </footer>
