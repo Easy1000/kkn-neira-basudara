@@ -62,13 +62,13 @@ const News = ({}) => {
 
         </div>
         <div className="absolute -z-10 scale-[30%] opacity-60 -right-72 -top-[500px] invisible lg:visible">
-          <Image src={SingleOrnament} />
+          <Image src={SingleOrnament} alt='ornament' />
         </div>
         <div className="absolute -z-10 scale-[80%] top-[500px] -left-24 invisible lg:visible" >
-          <Image src={DoubleOrnament} />
+          <Image src={DoubleOrnament} alt='ornament' />
         </div>
         <div className="absolute -z-10 scale-[40%] -right-[500px] opacity-80 top-[1000px] invisible lg:visible">
-          <Image src={SingleOrnament} />
+          <Image src={SingleOrnament} alt='ornament' />
         </div>
 
          
@@ -428,7 +428,7 @@ const NewsThumbnail = ({judul, deskripsi, thumbnail, author, date}) => {
     <div className={`w-full max-w-sm flex flex-col font-libre mx-auto lg:max-w-[2000px] `} >
       <div className='flex flex-col lg:flex-row-reverse lg:gap-8 hover:cursor-pointer group'>
         <div className='flex mb-5 overflow-clip lg:w-1/3'>
-          <img src={thumbnail} width={200} height={150} alt="thumbnail news"  className='w-full group-hover:scale-105 transition-transform object-cover lg:h-full' />
+          <Image src={thumbnail} width={200} height={150} alt="thumbnail news"  className='w-full group-hover:scale-105 transition-transform object-cover lg:h-full' />
         </div>
 
         <div className='flex lg:flex-col lg:justify-between lg:w-2/3'>
