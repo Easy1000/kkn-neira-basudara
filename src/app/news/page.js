@@ -2,9 +2,7 @@
 import { useEffect, useState } from "react";
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import VerticalNewsThumbnail from '../components/LandingPage/NewsHero/VerticalNewsThumbnail';
 import Image from "next/image";
-// import newsData from '../components/LandingPage/NewsHero/newsdata.json';
 import DoubleOrnament from "/public/images/landing-page/news/double-ornament-bg.png";
 import SingleOrnament from "/public/images/landing-page/news/single-ornament-bg.png";
 import Link from 'next/link';
@@ -148,7 +146,7 @@ const News = ({}) => {
         />
 
       </div>
-      <div className="w-72 h-[1200px]"></div>
+      <div className="w-72 lg:h-[800px]"></div>
       <Footer />
 
     </div>
@@ -167,7 +165,7 @@ const All = ({ filteredNews }) => {
       ) : (
         filteredNews.map((entry, index) => (
           <Link href={`/news/${entry.ID}`} key={entry.id}>
-            <VerticalNewsThumbnail key={index} {...entry} />
+            <NewsThumbnail key={index} {...entry} />
           </Link>
         ))
       )}
@@ -189,7 +187,7 @@ const Travel = ({filteredNews}) => {
           (
         travelNewsData.map((entry, index) => (
           <Link href={`/news/${entry.ID}`} key={entry.id}>
-          <VerticalNewsThumbnail 
+          <NewsThumbnail 
             key={index}
             {...entry}
           />
@@ -217,7 +215,7 @@ const Food = ({filteredNews}) => {
           (
         foodNewsData.map((entry, index) => (
           <Link href={`/news/${entry.ID}`} key={entry.id}>
-          <VerticalNewsThumbnail 
+          <NewsThumbnail 
             key={index}
             {...entry}
           />
@@ -243,7 +241,7 @@ const Culture = ({filteredNews}) => {
           (
         cultureNewsData.map((entry, index) => (
           <Link href={`/news/${entry.ID}`} key={entry.id}>
-          <VerticalNewsThumbnail 
+          <NewsThumbnail 
             key={index}
             {...entry}
           />
@@ -269,7 +267,7 @@ const Nature = ({filteredNews}) => {
           (
         natureNewsData.map((entry, index) => (
           <Link href={`/news/${entry.ID}`} key={entry.id}>
-          <VerticalNewsThumbnail 
+          <NewsThumbnail 
             key={index}
             {...entry}
           />
@@ -423,5 +421,48 @@ const NewsNotFound = () => {
       </div>
 
     </div>
+  )
+}
+
+
+const NewsThumbnail = ({judul, deskripsi, thumbnail, author, date}) => {
+  
+  return (
+    <div className={`w-full max-w-sm flex flex-col font-libre mx-auto lg:max-w-[2000px] `} >
+      <div className='flex flex-col lg:flex-row-reverse lg:gap-8 hover:cursor-pointer group'>
+        <div className='flex mb-5 overflow-clip lg:w-1/3'>
+          <img src={thumbnail} width={200} height={150} alt="thumbnail news"  className='w-full group-hover:scale-105 transition-transform object-cover lg:h-full' />
+        </div>
+
+        <div className='flex lg:flex-col lg:justify-between lg:w-2/3'>
+          <div className='flex flex-col'>
+
+            <div className='flex font-manjari mb-2 hover:cursor-pointer'>
+              <h2 className='text-xl font-bold leading-snug lg:text-2xl group-hover:underline'>{judul}</h2>
+            </div>
+
+            <div className='flex'>
+              <p className='text-xs lg:text-sm'>{deskripsi} </p>
+            </div>
+            
+            <div className='flex justify-between mt-4'>
+               <p className='flex justify-center text-xs lg:text-sm'>{new Date(date).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+              <p className='text-xs lg:text-sm'>{author}</p>
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+      <hr className={`mx-auto w-full lg:max-w-full lg:mx-0 border-c-green border-[0,5px] lg:my-8 mt-8 mb-4`}/>
+
+      
+
+    </div>
+
+
   )
 }

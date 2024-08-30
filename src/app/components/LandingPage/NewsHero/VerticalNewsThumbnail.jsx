@@ -1,6 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-const VerticalNewsThumbnail = ({category, tanggal, judul, deskripsi, thumbnail, author, date}) => {
+const VerticalNewsThumbnail = ({category, judul, deskripsi, thumbnail, author, date}) => {
   console.log(thumbnail)
   return (
     <div className={`w-full max-w-sm flex flex-col font-libre-franklin mx-auto lg:max-w-[2000px] `} >
@@ -22,7 +21,7 @@ const VerticalNewsThumbnail = ({category, tanggal, judul, deskripsi, thumbnail, 
                 </div>
 
               </div>
-                <p className='text-xs lg:hidden'>{tanggal}</p>
+                <p className='flex justify-center text-xs'>{new Date(date).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
             </div>
 
             <div className='flex font-manjari mb-2 hover:cursor-pointer'>
@@ -37,8 +36,6 @@ const VerticalNewsThumbnail = ({category, tanggal, judul, deskripsi, thumbnail, 
           </div>
 
           <div className='flex justify-between lg:mt-6'>
-            {/* <p className='hidden text-xs lg:flex'>{tanggal}</p> */}
-            <p className='flex justify-center text-xs'>{new Date(date).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
             <p className='hidden text-xs lg:flex'>{author}</p>
 
 
