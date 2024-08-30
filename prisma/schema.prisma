@@ -57,8 +57,9 @@ model Accessories {
 }
 
 model Gallery {
-  id      String @id @default(auto()) @map("_id") @db.ObjectId
-  judul   String
-  link    String
-  caption String
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  judul    String
+  link     String
+  caption  String
+  category String
 }
