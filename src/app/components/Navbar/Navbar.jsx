@@ -43,10 +43,10 @@ const Navbar = () => {
 
 
                 <div className="lg:flex lg:gap-10 xl:gap-32 items-center hidden">
-                    <a className='hover:underline' href="/news" onClick={() => router.push("/news")}>NEWS</a>
+                    <Link href="/news"><p className='hover:underline' >NEWS</p></Link>
                     <a className='hover:underline' href="">PODCAST</a>
                     <a className='hover:underline' href="">TEAM</a>
-                    <a className='hover:underline' href="">GALLERY</a>
+                    <Link href="/gallery"><p className='hover:underline'>GALLERY</p></Link>
                     <a className='hover:underline' href="">ABOUT US</a>
                 </div>
 
@@ -68,7 +68,7 @@ const Navbar = () => {
                             <a className='hover:underline' href="/news" onClick={() => router.push("/news")}>NEWS</a>
                             <a className='hover:underline' href="">PODCAST</a>
                             <a className='hover:underline' href="">TEAM</a>
-                            <a className='hover:underline' href="">GALLERY</a>
+                            <a className='hover:underline' href="gallery" onClick={() => router.push("/gallery")}>GALLERY</a>
                             <a className='hover:underline' href="">ABOUT US</a>
                         </div>
                     </div>

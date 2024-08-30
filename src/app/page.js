@@ -5,7 +5,7 @@ import NewsHero from "./components/LandingPage/NewsHero/NewsHero";
 import CarouselKontenInteraktif from "./components/LandingPage/CarouselKontenInteraktif/CarouselKontenInteraktif";
 import WhatsOnBanda from "./components/LandingPage/WhatsOnBanda/WhatsOnBanda";
 import { ApaKataMereka } from "./components/LandingPage/ApaKataMereka/ApaKataMereka";
-import NeiraGallery from "./components/LandingPage/NeiraGallery/NeiraGallery";
+import NeiraGalleryHero from "./components/LandingPage/NeiraGallery/NeiraGalleryHero";
 import Footer from "./components/Footer/Footer";
 import React from "react";
 
@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <CarouselKontenInteraktif />
       <ApaKataMereka />
-      <NeiraGallery />
+      <NeiraGalleryHero />
       <Footer />
     </main>
   );
