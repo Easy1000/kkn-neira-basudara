@@ -98,7 +98,7 @@ export default function NewsDetail() {
 export function ArticleBody({ articleBody }) {
   return (
     <div className=" p-4 pt-12 w-full mx-auto ">
-      <hr className='border-[#4C7C7F] border-1 lg:max-w-6xl max-w-lg lg:mb-12 mx-auto ' />
+      <hr className='border-[#4C7C7F] border-1 lg:max-w-6xl max-w-lg lg:mb-12 mx-auto mb-4' />
       {articleBody.map((content) => {
         if (content.paragraph) {
           return (

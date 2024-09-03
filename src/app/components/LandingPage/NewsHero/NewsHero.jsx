@@ -88,7 +88,7 @@ const NewsHero = () => {
             )
           ))}
 
-          <div className="w-full h-auto mt-12 lg:mt-8 flex justify-center lg:justify-end " onClick={handleButtonClick}>
+          <div className="w-full h-auto lg:mt-8 flex justify-center lg:justify-end " onClick={handleButtonClick}>
             <Button 
               text='READ MORE'
               isPrimary={false}

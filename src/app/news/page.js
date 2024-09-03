@@ -392,8 +392,8 @@ const Tabs = ({config}) => {
         }
       </div>
       
-        {/* mapping news based on active tab */}
-      <div className='border-2 border-c-green rounded-xl lg:rounded-3xl px-4 lg:px-12 bg-[#0F1112]/50 -mb-32'>
+      {/* mapping news based on active tab */}
+      <div className='border-2 border-c-green rounded-xl lg:rounded-3xl px-4 lg:px-12 bg-[#0F1112]/50 pb-4 -mb-32'>
         <div className='bg-transparent w-full h-8 lg:w-60'></div>
         <hr className='mx-auto max-w-sm lg:max-w-[2000px] border-c-green border-[0,5px] mb-6'/>
         {config[activeTab].component}
