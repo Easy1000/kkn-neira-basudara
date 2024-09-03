@@ -5,10 +5,9 @@ import OrnamentLeft from "/public/images/neira-gallery/ornament-left.png";
 import OrnamentRight from "/public/images/neira-gallery/ornament-right.png";
 import OrnamentLeftDesktop from "/public/images/neira-gallery/ornament-left-desktop.png";
 import OrnamentRightDesktop from "/public/images/neira-gallery/ornament-right-desktop.png";
-import FilterGallery from './FilterGallery.client';
 import { cache } from 'react';
 import { prisma } from '../../../prisma/prisma';
-import sampleGalleryData from './sampleGalleryData';
+import FallbackFilterGallery from './FallbackFilterGallery.client';
 
 async function Gallery() {
   const listImages = await getListImages()
@@ -27,8 +26,8 @@ async function Gallery() {
         <h1 className="font-reikna text-c-green text-6xl text-center lg:text-7xl">Neira Gallery</h1>
       </div>
 
-      <FilterGallery sampleGalleryData={sampleGalleryData}/>
       
+      <FallbackFilterGallery />
 
       <Footer />
     </div>

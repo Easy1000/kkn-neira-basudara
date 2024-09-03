@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -81,7 +81,7 @@ const FilterGallery = ({ sampleGalleryData }) => {
                         className="hidden"
                     />
                     <div className={`cursor-pointer border-[1px]  w-40 lg:py-1 rounded-[10px] lg:rounded-[13px] bg-[#666666]/45 font-reikna text-2xl lg:text-3xl lg:w- ${selectedCategory === 'Explore Banda' ? 'border-c-yellow text-c-yellow' : ''}`}>
-                        <p>Explore Bandas</p>
+                        <p>Explore Banda</p>
                     </div>
                 </label>
             </div>
