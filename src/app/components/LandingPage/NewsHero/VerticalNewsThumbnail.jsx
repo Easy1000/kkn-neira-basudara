@@ -1,11 +1,11 @@
-import React from 'react'
-const VerticalNewsThumbnail = ({category, judul, deskripsi, thumbnail, author, date}) => {
-  console.log(thumbnail)
+import Image from "next/image"
+const VerticalNewsThumbnail = ({category, title, subTitle, imgPath, author, date}) => {
+    
   return (
-    <div className={`w-full max-w-sm flex flex-col font-libre-franklin mx-auto lg:max-w-[2000px] `} >
+    <div className={`w-full max-w-sm flex flex-col font-libre mx-auto lg:max-w-[2000px] `} >
       <div className='flex flex-col lg:flex-row-reverse lg:gap-8 hover:cursor-pointer group'>
         <div className='flex mb-5 overflow-clip lg:w-1/3'>
-          <img src={thumbnail} width={200} height={150} alt="thumbnail news"  className='w-full group-hover:scale-105 transition-transform object-cover lg:h-full' />
+          <Image src={imgPath} width={200} height={150} alt="thumbnail news"  className='w-full group-hover:scale-105 transition-transform object-cover lg:h-full' />
         </div>
 
         <div className='flex lg:flex-col lg:justify-between lg:w-2/3'>
@@ -21,15 +21,15 @@ const VerticalNewsThumbnail = ({category, judul, deskripsi, thumbnail, author, d
                 </div>
 
               </div>
-                <p className='flex justify-center text-xs'>{new Date(date).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                <p className='flex justify-center text-xs'>{date}</p>
             </div>
 
             <div className='flex font-manjari mb-2 hover:cursor-pointer'>
-              <h2 className='text-xl font-bold leading-snug lg:text-2xl group-hover:underline'>{judul}</h2>
+              <h2 className='text-xl font-bold leading-snug lg:text-2xl group-hover:underline'>{title}</h2>
 
             </div>
             <div className='flex'>
-              <p className='text-xs lg:text-sm'>{deskripsi} </p>
+              <p className='text-xs lg:text-sm'>{subTitle} </p>
 
             </div>
             
@@ -45,7 +45,7 @@ const VerticalNewsThumbnail = ({category, judul, deskripsi, thumbnail, author, d
 
 
       </div>
-      <hr className={`mx-auto w-full lg:max-w-full lg:mx-0 border-c-green border-[0,5px] my-12`}/>
+      <hr className={`mx-auto w-full lg:max-w-full lg:mx-0 border-c-green-dark border-[0,5px] my-12`}/>
 
       
 
