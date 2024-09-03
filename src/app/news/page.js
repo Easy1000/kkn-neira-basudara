@@ -1,18 +1,19 @@
 'use client'
+
 import { useEffect, useState } from "react";
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import VerticalNewsThumbnail from '../components/LandingPage/NewsHero/VerticalNewsThumbnail';
+import Loader from '@/app/components/Loader/Loader';
+import Link from 'next/link';
 import Image from "next/image";
-// import newsData from '../components/LandingPage/NewsHero/newsdata.json';
 import DoubleOrnament from "/public/images/landing-page/news/double-ornament-bg.png";
 import SingleOrnament from "/public/images/landing-page/news/single-ornament-bg.png";
-import Link from 'next/link';
 
 const News = ({}) => {
   const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     async function fetchArticles() {
@@ -22,7 +23,8 @@ const News = ({}) => {
         setArticles(data.articles);
       } catch (error) {
         console.error("Failed to fetch articles:", error);
-      } finally {
+      } 
+      finally {
         setLoading(false);
       }
     }
@@ -30,6 +32,11 @@ const News = ({}) => {
     fetchArticles();
   }, []);
 
+  if (loading) {
+    return(
+      <div className='flex justify-center items-center h-screen'><Loader /></div>
+    );
+  }
 
   const filteredNews = articles.filter(entry =>
     entry.judul.toLowerCase().includes(searchTerm.toLowerCase())
@@ -64,13 +71,13 @@ const News = ({}) => {
 
         </div>
         <div className="absolute -z-10 scale-[30%] opacity-60 -right-72 -top-[500px] invisible lg:visible">
-          <Image src={SingleOrnament} />
+          <Image src={SingleOrnament} alt='ornament' />
         </div>
         <div className="absolute -z-10 scale-[80%] top-[500px] -left-24 invisible lg:visible" >
-          <Image src={DoubleOrnament} />
+          <Image src={DoubleOrnament} alt='ornament' />
         </div>
         <div className="absolute -z-10 scale-[40%] -right-[500px] opacity-80 top-[1000px] invisible lg:visible">
-          <Image src={SingleOrnament} />
+          <Image src={SingleOrnament} alt='ornament' />
         </div>
 
          
@@ -112,13 +119,10 @@ const News = ({}) => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 />
-              {/* <svg xmlns="http://www.w3.org/2000/svg" className='absolute right-1 top-1 w-4 h-4' width="13" height="13" fill="none" viewBox="0 0 13 13">
-                <path fill="#5E9599" d="M8.994 7.915h-.568l-.202-.194A4.677 4.677 0 0 0 9.29 3.879c-.338-2-2.007-3.597-4.022-3.842a4.68 4.68 0 0 0-5.23 5.23C.282 7.282 1.879 8.951 3.879 9.29A4.676 4.676 0 0 0 7.72 8.224l.194.202v.568l3.058 3.058a.76.76 0 0 0 1.071 0 .76.76 0 0 0 0-1.072l-3.05-3.065Zm-4.317 0A3.233 3.233 0 0 1 1.44 4.677 3.233 3.233 0 0 1 4.677 1.44a3.233 3.233 0 0 1 3.238 3.237 3.233 3.233 0 0 1-3.238 3.238Z"/>
-              </svg> */}
 
             </div>
           </div>
-          <p className='font-libre-franklin text-sm -mt-8 lg:hidden'>Tellus tristique tellus vel et facilisis amet et id duis!</p>
+          <p className='font-libre text-sm -mt-8 lg:hidden'>Tellus tristique tellus vel et facilisis amet et id duis!</p>
           <div className='relative mt-8 lg:hidden' >
             <input 
               className='w-72 bg-transparent border-b-[2px] border-c-green pb-1 pl-2 focus:outline-none ' 
@@ -148,7 +152,7 @@ const News = ({}) => {
         />
 
       </div>
-      <div className="w-72 h-[1200px]"></div>
+      {/* <div className="w-72 lg:h-[800px]"></div> */}
       <Footer />
 
     </div>
@@ -167,7 +171,7 @@ const All = ({ filteredNews }) => {
       ) : (
         filteredNews.map((entry, index) => (
           <Link href={`/news/${entry.ID}`} key={entry.id}>
-            <VerticalNewsThumbnail key={index} {...entry} />
+            <NewsThumbnail key={index} {...entry} />
           </Link>
         ))
       )}
@@ -189,7 +193,7 @@ const Travel = ({filteredNews}) => {
           (
         travelNewsData.map((entry, index) => (
           <Link href={`/news/${entry.ID}`} key={entry.id}>
-          <VerticalNewsThumbnail 
+          <NewsThumbnail 
             key={index}
             {...entry}
           />
@@ -217,7 +221,7 @@ const Food = ({filteredNews}) => {
           (
         foodNewsData.map((entry, index) => (
           <Link href={`/news/${entry.ID}`} key={entry.id}>
-          <VerticalNewsThumbnail 
+          <NewsThumbnail 
             key={index}
             {...entry}
           />
@@ -243,7 +247,7 @@ const Culture = ({filteredNews}) => {
           (
         cultureNewsData.map((entry, index) => (
           <Link href={`/news/${entry.ID}`} key={entry.id}>
-          <VerticalNewsThumbnail 
+          <NewsThumbnail 
             key={index}
             {...entry}
           />
@@ -269,7 +273,7 @@ const Nature = ({filteredNews}) => {
           (
         natureNewsData.map((entry, index) => (
           <Link href={`/news/${entry.ID}`} key={entry.id}>
-          <VerticalNewsThumbnail 
+          <NewsThumbnail 
             key={index}
             {...entry}
           />
@@ -388,8 +392,8 @@ const Tabs = ({config}) => {
         }
       </div>
       
-        {/* mapping news based on active tab */}
-      <div className='border-2 border-c-green rounded-xl lg:rounded-3xl px-4 lg:px-12 bg-[#0F1112]/50 -mb-32'>
+      {/* mapping news based on active tab */}
+      <div className='border-2 border-c-green rounded-xl lg:rounded-3xl px-4 lg:px-12 bg-[#0F1112]/50 pb-4 -mb-32'>
         <div className='bg-transparent w-full h-8 lg:w-60'></div>
         <hr className='mx-auto max-w-sm lg:max-w-[2000px] border-c-green border-[0,5px] mb-6'/>
         {config[activeTab].component}
@@ -423,5 +427,48 @@ const NewsNotFound = () => {
       </div>
 
     </div>
+  )
+}
+
+
+const NewsThumbnail = ({judul, deskripsi, thumbnail, author, date}) => {
+  
+  return (
+    <div className={`w-full max-w-sm flex flex-col font-libre mx-auto lg:max-w-[2000px] `} >
+      <div className='flex flex-col lg:flex-row-reverse lg:gap-8 hover:cursor-pointer group'>
+        <div className='flex mb-5 overflow-clip lg:w-1/3'>
+          <Image src={thumbnail} width={200} height={150} alt="thumbnail news"  className='w-full group-hover:scale-105 transition-transform object-cover lg:h-full' />
+        </div>
+
+        <div className='flex lg:flex-col lg:justify-between lg:w-2/3'>
+          <div className='flex flex-col'>
+
+            <div className='flex font-manjari mb-2 hover:cursor-pointer'>
+              <h2 className='text-xl font-bold leading-snug lg:text-2xl group-hover:underline'>{judul}</h2>
+            </div>
+
+            <div className='flex'>
+              <p className='text-xs lg:text-sm'>{deskripsi} </p>
+            </div>
+            
+            <div className='flex justify-between mt-4'>
+               <p className='flex justify-center text-xs lg:text-sm'>{new Date(date).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+              <p className='text-xs lg:text-sm'>{author}</p>
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+      <hr className={`mx-auto w-full lg:max-w-full lg:mx-0 border-c-green border-[0,5px] lg:my-8 mt-8 mb-4`}/>
+
+      
+
+    </div>
+
+
   )
 }

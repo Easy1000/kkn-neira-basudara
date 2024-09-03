@@ -1,7 +1,10 @@
+'use client'
 import React from 'react'
 import './gallery-styles.css';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import Button from '/src/app/components/Button/Button';
+import Link from 'next/link';
 import Pic1 from '/public/images/landing-page/neira-gallery/c2.png'
 import Pic2 from '/public/images/landing-page/neira-gallery/c2.png'
 import Pic3 from '/public/images/landing-page/neira-gallery/c3.png'
@@ -13,9 +16,11 @@ import Pic8 from '/public/images/landing-page/neira-gallery/c8.png'
 import Pic9 from '/public/images/landing-page/neira-gallery/c9.png'
 
 
-const NeiraGallery = () => {
+const NeiraGalleryHero = () => {
+  const router = useRouter();
+
   return (
-    <div className='lg:mt-72 w-full  md:bg-transparent h-auto'>
+    <div className='lg:mt-72 w-full  md:bg-transparent h-auto '>
         <div className="flex flex-col ">
         <div className="flex flex-row items-center gap-4 mx-auto mt-20 lg:mb-14"> 
             
@@ -84,35 +89,40 @@ const NeiraGallery = () => {
                 
             </div>
 
-            {/* <div className='border-2 border-gray-600 h-full bg-slate-500 flex'></div>
-            <div className='border-2 border-gray-600 h-full bg-slate-500 flex'></div>
-            <div className='border-2 border-gray-600 h-full bg-slate-500 flex'></div>
-            <div className='border-2 border-gray-600 h-full bg-slate-500 flex'></div>
-            <div className='border-2 border-gray-600 h-full bg-slate-500 flex'></div>
-            <div className='border-2 border-gray-600 h-full bg-slate-500 flex'></div> */}
         </div>
 
-        <div className='flex justify-around lg:py-20 bg-[#0F1112] px-16 py-4'>
-          <div className='flex flex-col lg:max-w-screen-md lg:gap-2 hover:border-white border-2 border-transparent hover:border-2 rounded-md p-4  lg:p-8 lg:rounded-[30px] hover:bg-white/10 transform duration-150 hover:cursor-pointer'>
-            <h2 className='font-reikna lg:text-6xl text-3xl text-c-green'>Aktivitas KKN</h2>
-            <p className='text-sm lg:text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus feugiat lacus quis bibendum. Cras sodales magna magna, quis venenatis turpis faucibus eu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi lacinia ultrices quam, in rhoncus justo posuere a. Praesent at varius magna.</p>
-          </div>
+        <div className=''>
+          <div className='flex justify-around lg:py-20 px-16 py-4'>
+            <div className='flex flex-col lg:max-w-screen-md lg:gap-2 hover:border-white border-2 border-transparent hover:border-2 rounded-md p-4  lg:p-8 lg:rounded-[30px] hover:bg-white/10 transform duration-150 hover:cursor-pointer' onClick={() => router.push('/gallery?filter=Aktivitas%20KKN')}>
+              <h2 className='font-reikna lg:text-6xl text-3xl text-c-green'>Aktivitas KKN</h2>
+              <p className='text-xs lg:hidden'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus feugiat lacus quis bibendum. Cras sodales magna magna, quis venenatis turpis faucibus eu. </p>
+              <p className='hidden lg:flex'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus feugiat lacus quis bibendum. Cras sodales magna magna, quis venenatis turpis faucibus eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus feugiat lacus quis bibendum. Cras sodales magna magna, quis venenatis turpis faucibus eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus feugiat lacus quis bibendum. Cras sodales magna magna, quis venenatis turpis faucibus eu. </p>
+              
+            </div>
 
-          <div className='flex flex-col lg:max-w-screen-md lg:gap-2 hover:border-white border-2 border-transparent hover:border-2 rounded-md p-4  lg:p-8 lg:rounded-[30px] text-right hover:bg-white/10  transform duration-150 hover:cursor-pointer'>
-            <h2 className='font-reikna lg:text-6xl text-3xl text-c-green'>Explore Banda</h2>
-            <p className='text-sm lg:text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus feugiat lacus quis bibendum. Cras sodales magna magna, quis venenatis turpis faucibus eu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi lacinia ultrices quam, in rhoncus justo posuere a. Praesent at varius magna.</p>
+            <div className='flex flex-col lg:max-w-screen-md lg:gap-2 hover:border-white border-2 border-transparent hover:border-2 rounded-md p-4  lg:p-8 lg:rounded-[30px] text-right hover:bg-white/10  transform duration-150 hover:cursor-pointer' onClick={() => router.push('/gallery?filter=Explore%20Banda')}>
+              <h2 className='font-reikna lg:text-6xl text-3xl text-c-green'>Explore Banda</h2>
+              <p className='text-xs lg:hidden'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus feugiat lacus quis bibendum. Cras sodales magna magna, quis venenatis turpis faucibus eu. </p>
+              <p className='hidden lg:flex'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus feugiat lacus quis bibendum. Cras sodales magna magna, quis venenatis turpis faucibus eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus feugiat lacus quis bibendum. Cras sodales magna magna, quis venenatis turpis faucibus eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus feugiat lacus quis bibendum. Cras sodales magna magna, quis venenatis turpis faucibus eu. </p>  
+            </div>
+
           </div>
+        
+          <Link href="/gallery">
+            <Button 
+              text='SEE MORE'
+              isPrimary={false}
+              isAction={true}
+              // path={'/gallery'}
+              className='flex justify-center'
+              />
+          </Link>
+
         </div>
         
         
-        <Button 
-        text='SEE MORE'
-        isPrimary={false}
-        isAction={true}
-        className='flex justify-center bg-[#0F1112]'
-        />
     </div>
   )
 }
 
-export default NeiraGallery
+export default NeiraGalleryHero;

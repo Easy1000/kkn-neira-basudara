@@ -58,5 +58,13 @@ body{
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  src: url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100');
+  font-family: "Libre-Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap'); */
 

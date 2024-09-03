@@ -7,6 +7,7 @@ import { useLayoutEffect } from 'react';
 import newsData  from './newsdata.json';
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const useIsLargeScreen = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -58,32 +59,36 @@ const NewsHero = () => {
           
           <div className="max-w-xl mx-6 sm:mx-auto">
             
-            <hr className='mx-auto max-w-sm lg:max-w-full lg:mx-0 border-c-green-dark border-[1px]'/>
+            <hr className='mx-auto max-w-sm md:max-w-full lg:mx-0 border-c-green-dark border-[1px] mb-10  lg:mb-2'/>
             {newsData.map((news) => (
             isLargeScreen ? (
-              <div key={news.id}>
-                <HorizontalNewsThumbnail
-                  key={news.id}
-                  {...news}
-                />
-              <hr className='mx-auto max-w-sm lg:max-w-full lg:mx-0 border-c-green-dark border-[1px]'/>
+              <div key={news.id} >
+                <Link href={`/news/${news.id}`}>
+                  <HorizontalNewsThumbnail
+                    key={news.id}
+                    {...news}
+                  />
+                </Link>
+              <hr className='mx-auto max-w-sm md:max-w-full lg:mx-0 border-c-green-dark border-[1px] md:my-8 lg:my-0 '/>
 
               </div>
               
             ) : (
               <div key={news.id}>
-                <VerticalNewsThumbnail
-                  key={news.id}
-                  {...news}
-                />
-              <hr className='mx-auto max-w-sm lg:max-w-full lg:mx-0 border-c-green-dark border-[1px]'/>
+                <Link href={`/news/${news.id}`}>
+                  <VerticalNewsThumbnail
+                    key={news.id}
+                    {...news}
+                  />
+                </Link>
+              {/* <hr className='mx-auto max-w-sm lg:max-w-full lg:mx-0 border-c-green-dark border-[1px]'/> */}
 
 
               </div>
             )
           ))}
 
-          <div className="w-full h-auto mt-12 lg:mt-8 flex justify-center lg:justify-end " onClick={handleButtonClick}>
+          <div className="w-full h-auto lg:mt-8 flex justify-center lg:justify-end " onClick={handleButtonClick}>
             <Button 
               text='READ MORE'
               isPrimary={false}

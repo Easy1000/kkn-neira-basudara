@@ -3,14 +3,12 @@ import Image from 'next/image'
 export const HorizontalNewsThumbnail = ({category, date, title, subTitle, imgPath}) => {
   return (
     <div>
-        <div className='flex lg:gap-8 lg:py-5 gap-3 md:gap-6 lg:min-h-56'>          
-            {/* <div className='md:py-4 h-full w-auto lg:py-0 lg:w-1/3 '>
-                <Image src={imgPath} alt='thumbnail news' width={200} height={200} className='h-full w-auto lg:object-cover' />
-            </div> */}
-            <div className='flex hover:cursor-pointer'>
-                <Image src={imgPath} alt='thumbnail news' width={200} height={200} className='h-full w-auto lg:object-cover' />               
+        <div className='flex lg:gap-8 lg:py-5 gap-3 md:gap-6 lg:min-h-56 group'>          
+            
+            <div className='flex hover:cursor-pointe overflow-clip'>
+                <Image src={imgPath} alt='thumbnail news' width={200} height={200} className='h-full w-auto lg:object-cover group-hover:scale-105 group-hover:transition-transform' />               
             </div>
-            <div className='flex flex-col justify-evenly lg:gap-4'>
+            <div className='flex flex-col justify-evenly md:gap-4'>
                 <div className='flex justify-between items-center'>
                     <div className='flex gap-8 items-center'>
                         <p className='uppercase hover:cursor-pointer text-xs lg:text-base md:text-sm'>{category}</p>
@@ -25,7 +23,7 @@ export const HorizontalNewsThumbnail = ({category, date, title, subTitle, imgPat
                 </div>
 
                 <div className='lg:max-w-xs flex flex-col justify-center hover:cursor-pointer'>
-                    <h2 className='font-manjari lg:text-xl font-bold hover:underline hover:cursor-pointer text-sm md:text-lg'>{title}</h2>
+                    <h2 className='font-manjari lg:text-xl font-bold group-hover:underline group-hover:cursor-pointer text-sm md:text-lg'>{title}</h2>
                     <p className=' text-xs md:text-sm lg:hidden xl:flex'>{subTitle}</p>
                 </div>
 
