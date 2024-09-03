@@ -1,13 +1,16 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const FilterGallery = ({ sampleGalleryData }) => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [isPopupVisible, setIsPopupVisible] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedCategory, setSelectedCategory] = useState('Semua');
+    const router = useRouter();
+    const searchParams = useSearchParams();
 
     const openPopup = (index) => {
         setSelectedImage(filteredData[index]);
@@ -35,6 +38,12 @@ const FilterGallery = ({ sampleGalleryData }) => {
         ? sampleGalleryData
         : sampleGalleryData.filter(item => item.category === selectedCategory);
 
+
+    useEffect(() => {
+        const filterFromURL = searchParams.get('filter') || 'Semua';
+        setSelectedCategory(filterFromURL);
+    }, [router.searchParams, searchParams]);
+    
     return (
         <div>
             {/* Filter buttons */}
@@ -59,8 +68,8 @@ const FilterGallery = ({ sampleGalleryData }) => {
                         onChange={(e) => setSelectedCategory(e.target.value)}
                         className="hidden"
                     />
-                    <div className={`cursor-pointer border-[1px]  w-40 lg:py-1 rounded-[10px] lg:rounded-[13px] bg-[#666666]/45 font-reikna text-2xl lg:text-3xl lg:w- ${selectedCategory === 'Aktivitas KKN' ? 'border-c-yellow text-c-yellow' : ''}`}>
-                        Aktivitas KKN
+                    <div className={`cursor-pointer border-[1px]  w-40 lg:py-1 rounded-[10px] lg:rounded-[13px] bg-[#666666]/45 font-reikna text-2xl lg:text-3xl ${selectedCategory === 'Aktivitas KKN' ? 'border-c-yellow text-c-yellow' : ''}`}>
+                        <p className="leading-tight">Aktivitas KKN</p>
                     </div>
                 </label>
                 <label className="text-center mx-auto">
@@ -72,7 +81,7 @@ const FilterGallery = ({ sampleGalleryData }) => {
                         className="hidden"
                     />
                     <div className={`cursor-pointer border-[1px]  w-40 lg:py-1 rounded-[10px] lg:rounded-[13px] bg-[#666666]/45 font-reikna text-2xl lg:text-3xl lg:w- ${selectedCategory === 'Explore Banda' ? 'border-c-yellow text-c-yellow' : ''}`}>
-                        Explore Banda
+                        <p>Explore Bandas</p>
                     </div>
                 </label>
             </div>

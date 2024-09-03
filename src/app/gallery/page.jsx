@@ -1,4 +1,6 @@
-import Image from 'next/image';
+'use client'
+
+  import Image from 'next/image';
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import OrnamentLeft from "/public/images/neira-gallery/ornament-left.png";
@@ -9,7 +11,6 @@ import sampleGalleryData from "./sampleGalleryData";
 import FilterGallery from './FilterGallery.client';
 
 function Gallery() {
-  
   return (
     <div className="">
       <Navbar />
@@ -24,7 +25,7 @@ function Gallery() {
         <h1 className="font-reikna text-c-green text-6xl text-center lg:text-7xl">Neira Gallery</h1>
       </div>  
 
-      <FilterGallery sampleGalleryData={sampleGalleryData} />
+      <FilterGallery sampleGalleryData={sampleGalleryData}/>
       
 
       <Footer />

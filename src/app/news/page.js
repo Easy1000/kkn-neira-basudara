@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const News = ({}) => {
   const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
@@ -20,9 +20,10 @@ const News = ({}) => {
         setArticles(data.articles);
       } catch (error) {
         console.error("Failed to fetch articles:", error);
-      } finally {
-        setLoading(false);
-      }
+      } 
+      // finally {
+      //   setLoading(false);
+      // }
     }
 
     fetchArticles();

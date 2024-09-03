@@ -6,6 +6,7 @@ import LogoKKN from '/public/images/landing-page/footer/logo-kkn.png'
 import LogoUGM from '/public/images/landing-page/footer/logo-ugm.png'
 import TransisiFooter from '/public/images/landing-page/footer/TransisiFooter.png'
 import Button from '../Button/Button'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -79,11 +80,11 @@ const Footer = () => {
                 <div className='flex font-manjari w-full justify-between'>
                   <div className='flex-col flex justify-around gap-8 lg:gap-8'>
                     <a href="">PODCAST</a>
-                    <a href="/news" onClick={() => router.push("/news")}>NEWS</a>
+                  <Link href='/news'><p>NEWS</p></Link>
                     <a href="">TEAM</a>
                   </div>
                   <div className='flex-col flex lg:gap-8 gap-4 text-end'>
-                    <a href="" onClick={() => router.push("/gallery")}>GALLERY</a>
+                    <Link href='/gallery'><p>GALLERY</p></Link>
                     <a href="">ABOUT US</a>
                   </div>
 

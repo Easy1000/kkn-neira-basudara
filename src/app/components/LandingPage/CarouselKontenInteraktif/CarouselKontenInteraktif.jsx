@@ -14,6 +14,7 @@
     // import required modules
     import { EffectCoverflow, Mousewheel, Navigation } from 'swiper/modules';
     import Button from '../../Button/Button';
+    import Link from 'next/link';
 
     const videodata = [
         {
@@ -181,12 +182,14 @@
                 </Swiper>
                 
             </div>
+            <Link href='https://www.tiktok.com/@neira.basudara' target='_blank'>
                 <Button 
-                text='SEE MORE'
-                isAction={true}
-                isPrimary={false}
-                className='z-50 flex justify-center -translate-y-56 md:-translate-y-80 lg:-translate-y-96 ' 
-            />
+                    text='SEE MORE'
+                    isAction={true}
+                    isPrimary={false}
+                    className='z-50 flex justify-center -translate-y-56 md:-translate-y-80 lg:-translate-y-96 ' 
+                />
+            </Link>
             
                     
         </div>
