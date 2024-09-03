@@ -1,16 +1,19 @@
 'use client'
+
 import { useEffect, useState } from "react";
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import Loader from '@/app/components/Loader/Loader';
+import Link from 'next/link';
 import Image from "next/image";
 import DoubleOrnament from "/public/images/landing-page/news/double-ornament-bg.png";
 import SingleOrnament from "/public/images/landing-page/news/single-ornament-bg.png";
-import Link from 'next/link';
 
 const News = ({}) => {
   const [articles, setArticles] = useState([]);
-  // const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
     async function fetchArticles() {
@@ -21,14 +24,19 @@ const News = ({}) => {
       } catch (error) {
         console.error("Failed to fetch articles:", error);
       } 
-      // finally {
-      //   setLoading(false);
-      // }
+      finally {
+        setLoading(false);
+      }
     }
 
     fetchArticles();
   }, []);
 
+  if (loading) {
+    return(
+      <div className='flex justify-center items-center h-screen'><Loader /></div>
+    );
+  }
 
   const filteredNews = articles.filter(entry =>
     entry.judul.toLowerCase().includes(searchTerm.toLowerCase())

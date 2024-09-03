@@ -3,6 +3,7 @@ import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Navbar from '@/app/components/Navbar/Navbar';
 import Footer from '@/app/components/Footer/Footer';
+import Loader from '@/app/components/Loader/Loader';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -30,7 +31,11 @@ export default function NewsDetail() {
     }
   }, [id]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) {
+    return(
+      <div className='flex justify-center items-center h-screen'><Loader /></div>
+    );
+  }
   if (!article) return <p>Article not found</p>;
 
   return (
@@ -48,7 +53,7 @@ export default function NewsDetail() {
             <svg xmlns="http://www.w3.org/2000/svg" width="6" height="13" fill="none" viewBox="0 0 6 13" className='lg:scale-150' >
               <path stroke="#629A9D" stroke-linecap="round" stroke-linejoin="round" stroke-width=".579" d="m.422 12 5.21-5.5L.422 1" />
             </svg>
-            <Link href='/'><p className='hover:pointer capitalize'>{article.category}</p> </Link>
+            <p className='hover:pointer capitalize'>{article.category}</p>
           </div>
 
           {/* Article Header */}
